@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./jogoDaVelha.css">
+    <link rel="stylesheet" href="../global.css">
+    <title>Jogo da velha</title>
+</head>
+<body>
+    <div id="tabuleiro" class="caixa-principal" style="margin-top: 5%;">
+        <div id="1" class="sub-caixa" value="1" ></div>
+        <div id="2" class="sub-caixa" value="2"></div>
+        <div id="3" class="sub-caixa" value="3"></div>
+
+        <div id="4" class="sub-caixa" value="4"></div>
+        <div id="5" class="sub-caixa" value="5"></div>
+        <div id="6" class="sub-caixa" value="6"></div>
+
+        <div id="7" class="sub-caixa" value="7"></div>
+        <div id="8" class="sub-caixa" value="8"></div>
+        <div id="9" class="sub-caixa" value="9"></div>
+    </div>
+    <div class="informacoes">
+        <h3 style="margin: 20px 0;">Observações:</h3>
+        <span>O Jogador 1 é o <strong>X</strong></span><br>
+        <span>O Jogador 2 é o <strong>O</strong></span>
+    </div>
+    <div class="voltar">
+        <button onclick="window.history.back()">Voltar</button>
+    </div>
+    <div class="voltar" style="right: 0;">
+        <button onclick="resetaJogo()">Resetar</button>
+    </div>
+    <div id="campoSucess" class="sucess">
+        <h1 id="jogador" class="modalJogadorCampeao"></h1>
+    </div>
+</body>
+<script src="./jogoDaVelha.js"></script>
+</html>

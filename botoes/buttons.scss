@@ -1,0 +1,110 @@
+.buttons-radius{
+    width: 100%;
+    height:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.buttons-radius2{
+    width: 100%;
+    height:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.margin {
+    margin-top: 100px;
+}
+.buttons-radius button{
+    width: 100px;
+    padding:10px;
+}
+.buttons-radius2 button{
+    width: 50px;
+    height: 50px;
+    padding:10px;
+}
+.buttons-radius .btn1{
+    background-color: rgb(27, 124, 27);
+    border:1px solid;
+    color:white;
+    transition: all 0.3s;
+    border-radius:5px;
+}
+.buttons-radius .btn1:hover{
+    background-color: rgb(31, 165, 31);
+    transition: all 0.3s;
+    cursor:pointer;
+    transform: scale(1.05);
+}
+.buttons-radius .btn2{
+    background: linear-gradient(90deg,#389bff,#389bff,#ffffff,#ffffff);
+    background-size: 250%;
+    transition: .5s;
+    background-position: right;
+    outline: none;
+}
+.buttons-radius .btn2:hover{
+    background-position: left;
+    box-shadow: 6px 6px #1234;
+    cursor:pointer;
+}
+.buttons-radius .btn3{
+    border-right: none;
+    border-left: none;
+}
+.btn6 {
+    background-color: #fff;
+    border: none;
+}
+.btn5 { 
+    border-radius: 50%;
+    background-color:#fff;
+    border:4px solid grey;
+    border-right:5px solid blue;
+    animation: 1s loading1 infinite ease-out;
+}
+.btn6{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 60px!important;
+}
+.bolinha{
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #389bff;
+
+}
+.anim1{
+    animation: 1s anim1  ease-in-out 10000;
+}
+.anim2{
+    animation: 1s anim2  ease-in-out 10000;
+    animation-delay: 0.2s;
+}
+.anim3{
+    animation: 1s anim3  ease-in-out 10000;
+    animation-delay: 0.5s;
+}
+
+@keyframes loading1 {
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+@keyframes anim1 {
+    0%{ height: 12px;}
+    50%{ height: 25px;}
+    100%{ height: 12px;}
+}
+@keyframes anim2 {
+    0%{ height: 12px;}
+    50%{ height: 25px;}
+    100%{ height: 12px;}
+}
+@keyframes anim3 {
+    0%{ height: 12px;}
+    50%{ height: 25px;}
+    100%{ height: 12px;}
+}

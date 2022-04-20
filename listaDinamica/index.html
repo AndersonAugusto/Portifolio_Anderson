@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../paleta.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./projeto2.css">
+    <title>Lista dinâmica</title>
+</head>
+<body>
+    <h2 class="titleNv0 flexCenter" style="color:rgb(0, 255, 242);">Lista Dinâmica</h2>
+    <section class="sectionForm">
+        <form class="formDinamica flexAlignCenter">
+            <label>NOME:</label>
+            <input id="nome" type="text"/>
+            <label>E-MAIL:</label>
+            <input id="email" type="text"/>
+            <button type="button" id="none" onclick="enviarDados()" onmouseout="voltaText() "onmouseover="someText()"> <p style="color:black;">Adicionar</p> </button>
+        </form>
+    </section>
+    <section id="lista">
+        <ul id="listaInterna">
+
+        </ul>
+    </section>
+    <div class="voltar">
+        <button onclick="window.history.back()">Voltar</button>
+    </div>
+</body>
+<script>
+     enviarDados = () => {
+        let arrayCard = ['modelo', 'modelo2']
+
+        let listaInterna = document.getElementById('listaInterna').innerHTML;
+        let nome = document.getElementById('nome').value;
+        let email = document.getElementById('email').value;
+
+        listaInterna += "<li class='card'>"+"<p>" + nome + "</p>"+"<p>" + email + "</p>"+"</li>"
+
+        document.getElementById('listaInterna').innerHTML = listaInterna;
+        document.getElementById('nome').value = ''  
+        document.getElementById('email').value = ''        
+        
+    }
+</script>
+<script>
+     someText = () => document.getElementById('none').textContent = ''
+     voltaText = () => document.getElementById('none').textContent = 'Adicionar'
+</script>
+</html>
