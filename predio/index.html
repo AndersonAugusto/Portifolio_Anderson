@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Protótipo</title>
+    <style>
+        .medias{
+            top:0;
+        }
+        @media (max-width:1800px){
+            .medias{
+                transform: scale(0.95);
+            }
+        }
+        @media (max-width:1700px){
+            .medias{
+                transform: scale(0.9);
+            }
+        }
+        @media (max-width:1600px){
+            .medias{
+                transform: scale(0.8);
+            }
+        }
+        @media (max-width:1400px){
+            .medias{
+                transform: scale(0.7);
+            }
+        }
+        @media (max-width:1350px){
+            .medias{
+                transform: scale(0.65);
+            }
+        }
+        @media (max-width:1100px){
+            .medias{
+                transform: scale(0.5);
+            }
+        }
+        @media (max-width:1024px){
+            .medias{
+                transform: scale(0.4);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = ChamaAndar;
+
+        function ChamaAndar(x){
+            x = window.location.href = 'http://127.0.0.1:5500/predio/index.html#1';//A PAGINA VAI SER RECARREGADA NESSE ENDEREÇO
+        }
+    </script>
+    <!--AQUI FICARÁ OS BOTOES FIXEDs-->
+    <div class="setas">
+        <div class="fixa-componante">
+            <div class="seta_pagina">
+                <div class="botao-andares nome-andares">Andares</div>
+                <a id="v" href="#1"><div id="andar1" class="botao-andares">1</div></a>
+                <a href="#2"><div id="andar2" class="botao-andares">2</div></a>
+                <a href="#3"><div id="andar3" class="botao-andares">3</div></a>
+                <a href="#4"><div id="andar4" class="botao-andares">4</div></a>
+                <a href="#5"><div id="andar5" class="botao-andares">5</div></a>
+                <img src="./icones/zoom/zoom_menos_white.png" id="Out" alt="Zoom Out"/>
+                <img src="./icones/zoom/zoom_mais_white.png" id="In" alt="Zoom In"/>
+                <div class="voltar">
+                    <button onclick="window.history.back()">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--fim dos botoes-->
+    <div id="1" class="medias" style="width:1600px;margin:0 auto; z-index: index 99999;">
+        <div class="telhado">
+            <img src="./imagem/telhado3.png">
+        </div>
+        <!--CAMADA 1-->
+        <div class="camada-1" style="margin-top:75px!important;">
+          <div class="logo">
+                <img class="logo-camada-1" src="" alt="logo da Empresa">
+                <img class="quadro-camada-1" src="./imagem/quadro_topo.png">
+            </div>
+            <div class="fundo-camada-1">
+                <div class="fundo-camada-2">
+                    <div class="camada-1-triangulo"></div>
+                    <div class="ventilador"><img src="./imagem/ventilador3.png"></div>
+                    <div class="camada-1-triangulo2"></div>
+                    <div class="parede-camada-1">
+                        <div class="cortina"><img src="./imagem/cortina3.png"></div>
+                        <div class="mesa-andar-1"><img src="./imagem/cadeira-andar-1.png"></div>
+                        <div class="text-camada-1">
+                            <h3>Bem-vindo</h3>
+                            <p>A X é uma Empresa séria e comprometida com seus franqueados. Oferecemos suporte de qualidade, e prezamos pelo bom relacionamento
+                                com nossos franqueados.
+                            </p>
+                            <p>Temos toda a estrutura necessária para oferecer aquilo que precisa para iniciar seu negócio. Trabalhamos com marcas bem selecionadas.</p>
+                            <p>Preencha o formulário e fale com nossos representantes para obter maiores informações, faça parte deste time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="cam1">
+        </div>
+        <!--FIM CAMADA 1-->
+        <div id="2" class="camada-2">
+               
+                <div class="quadro1">
+                    <div class="janela"><img src="./imagem/janela/janela4.png"></div>
+                    <div class="balancadinha">
+                        <img class="qdr1" src="./imagem/quadroHausz_R.png">
+                        <img class="qdr2" src="" alt="logo">
+                    </div>
+                </div>
+                <div class="balancadinha1" style="padding-right: 200px;">
+                    <div class="placa_marcas">
+                        <img src="./imagem/quadro_2.png">
+                        <p>Assista um vídeo</p>
+                    </div>
+                </div>
+                <div class="video">
+                    <input type='color' id='background' class="persinalizarInput" value='#6E8B3D'>
+                    <div id="parede" class="video-take">
+                        <div class="inserir-video">
+                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-tTglFYF1wo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="inserir-video-molde"></div>
+                        <div class="baixo"></div>
+                        <div class="cima"></div>
+                        <div class="lampada"><img src="./imagem/luz2_R.png"></div>
+                        <div class="lampada-parede"><img src="./imagem/lampada3.png"></div>
+                        <div class="sofa"><img src="./imagem/cad2.png"></div>
+                        <div class="sofa1"><img src="./imagem/cad2.png"></div>
+                        <div class="rack"><img src="./imagem/rack2_R.png"></div>
+                        <div class="quadro">
+                            <div><img src="./imagem/quadro_r.png"></div>
+                        </div>
+                    </div>
+                    <div class="formal"><img src="./imagem/formal.png"></div>
+                    <div class="formal1"><img src="./imagem/sentado.png"></div>
+                </div>
+                <img class="cam1">
+                <div class="chao"></div>
+                <div class="teto"></div>
+        </div>
+        <div class="camada-3" id="3">
+    
+            <div class="barra-cinza">
+                <img class="grade-sacada" src="./imagem/grade-sacada.png">
+                <div class="parede-esquerda"></div>
+                <div class="parede-direita"></div>
+            </div>
+            <div class="balancadinha1">
+                <div class="placa_marcas">
+                    <img src="./imagem/quadro_2.png">
+                    <p>Formulário</p>
+                </div>
+            </div>
+                <div class="camada-3-fundo">
+                    <div class="camada-3-cinza">
+                        <div class="camada-1-triangulo"></div>
+                        <div class="camada-1-triangulo2"></div>
+                        <div class="parede-camada-3">
+                            <div class="box-left-camada3">
+                                <p>Formulário</p>
+                                <p>Preencha seus dados para falar com nossos representantes.</p>
+                            </div>
+                        </div>
+                        <div class="formulario">
+                                <form class="form">
+                                
+                                    <input type="text" placeholder="Nome">
+                                
+                                    <input type="email" placeholder="E-mail">
+                                
+                                    <input type="text" placeholder="CEP">
+                                
+                                    <input type="text" placeholder="Telefone">
+                                    <div class="area-button">
+                                        <textarea placeholder="Faça seu comentario aqui.."></textarea>
+                                        <button>
+                                            Enviar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                     </div>
+                </div>
+           
+            <img class="cam1">
+        </div>
+        <div class="balancadinha1">
+            <div class="placa_marcas">
+                <img src="./imagem/quadro_2.png">
+                <p>Conheça Franqueados</p>
+            </div>
+        </div>
+        <div class="camada-4 cam1">     
+            <div  id="4" class="marcas-camada-cinza">
+                <div class="luz-teto">
+                    <img src="./imagem/luz-teto.png">
+                    <img src="./imagem/luz-teto.png" style="opacity: 0;">
+                    <img src="./imagem/luz-teto.png">
+                </div>
+                <div class="baixo"></div>
+                <div class="cima"></div>
+                <div class="planta-camada-4"><img src="./imagem/planta.png"></div>
+                <div class="borda-item-principal">
+                    <div class="moldura-item">
+                        <div class="lista minutes">
+                            <div class="minute">
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                            </div>
+                            <div class="minute">
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                            </div>
+                            <div class="minute">
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                                <div class="marcas">
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                    <div class="borda-marca"><img src="" alt="Logo"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="5" class="camada-5 cam1">
+            <div class="balancadinha1">
+                <div class="placa_marcas">
+                    <img src="./imagem/quadro_2.png">
+                    <p>Esperamos por você</p>
+                </div>
+            </div>
+            <div class="alinhamento-footer">
+                <div class="lado-1">
+                    <div class="footer-canto-esquerdo"></div>
+                    <div class="footer-cima some-direita"></div>
+                    <div class="footer-baixo some-direita"></div>
+                </div>
+                <div class="lado-2">
+                    <div class="footer-cima some-direita some-esquerda"></div>
+                    <div class="footer-baixo some-direita some-esquerda"></div>
+                </div>
+                <div class="lado-3">
+                    <div class="footer-canto-direito"></div>
+                    <div class="footer-cima some-esquerda"></div>
+                    <div class="footer-baixo some-esquerda"></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+    </script>
+    <script>
+    
+        const target = document.querySelectorAll('[data-anime]'); // Animacao-fade
+        const animationClass = 'animate';// Animacao-fade
+
+        var page = $("html, body");
+        var animationDuration = 1000;
+        $(".anchor").click(function() {
+            page.animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, animationDuration);
+            return false;
+        });
+
+        function animeScroll(){
+            const windowTop = window.pageYOffset + ((window.innerHeight * 3.4) / 4);
+            //console.log(windowTop);
+            target.forEach(function(element) {
+                if((windowTop) > element.offsetTop) {
+                    element.classList.add(animationClass);
+                } 
+            })
+        }
+        
+        if(target.length){
+            window.addEventListener('scroll', function() {
+            animeScroll();
+        })
+     }
+      
+        
+    </script>
+    <script src="./corParede.js"></script>
+    <script src="./carouselMarcas.js"></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/kineticjs/5.0.1/kinetic.min.js'></script>
+</body>
+</html>
