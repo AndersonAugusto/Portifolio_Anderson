@@ -1,18 +1,5 @@
 
 
- let innit = document.getElementById('innit');
-
-onload = () => {
-    innit.style.display = 'flex';
-    document.documentElement.style.overflow = 'hidden';
-}
-
-
-function acessarHome(){
-    let innit = document.getElementById('innit').style.display = 'none';
-    document.documentElement.style.overflow = 'auto';
-}
-
 
 const button = document.getElementById("runaway-btn");
 

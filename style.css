@@ -42,8 +42,6 @@ body {
 }
 
 .scroll-n1 {
-  -webkit-animation: pulinho 1s alternate;
-          animation: pulinho 1s alternate;
   width: 100%;
   height: auto;
   margin: 100px;
