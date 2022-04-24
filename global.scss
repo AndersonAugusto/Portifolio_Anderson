@@ -8,14 +8,18 @@
 
 body{
     overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
 }
 
 ::-webkit-scrollbar {
     background-color:rgb(63, 63, 63);
     width: 5px;
+    height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(177, 76, 29);
+    background-color: #3bd9f0;
     border-radius: 10px;
 }
 
@@ -35,3 +39,66 @@ body{
     color:#fff;
     box-shadow: 0px 1px 4px 2px rgb(65, 65, 65);
 }
+#innit{
+    width:100%;
+    position:absolute;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.974);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.animation{
+    color:white;
+    cursor: pointer;
+    font-size: 50px;
+    transition: all 0.2s;
+    height: 264px;
+}
+@keyframes rodando {
+    0%{
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    50%{
+        transform: rotate3d(100, 100, 150, 360deg);
+    }
+    100%{
+        transform: rotate3d(0, 0, 0, 45deg);
+    }
+}
+
+.box-innit {
+    position: relative;
+}
+.animation:hover {
+    box-shadow: 0px 0px 12px 2px #ff9d6f;
+    transform: scale(1.05);
+    transition: all 0.2s;
+    border-radius: 50%;
+}
+.animation p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-80%);
+    width: 100%;
+}
+.center {
+    text-align: center;
+}
+
+#runaway-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 5px transparent;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+

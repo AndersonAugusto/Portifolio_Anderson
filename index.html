@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./paleta.css">
-    <link rel="stylesheet" href="./global.css">
     <title>Anderson</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init('yrJ7LoiyBxJZSI8fH');
+        })();
+    </script>
+   <script type="text/javascript">      
+        function sendEmail(params){
+            var tempParams = {
+                name: document.getElementById("name").value,
+                title: document.getElementById("title").value,
+                message: document.getElementById("message").value,
+            };
+            emailjs.send('service_ftqwwl7' , 'template_mt2r5ca' , tempParams)
+            .then(function(res){
+                console.log("Sucess" , res.status)
+            })
+        }
+
+
+
+    </script>
 </head>
 <body>
+<!-- <div id="innit">
+    <div class="animation" onclick="acessarHome()"> 
+        <div class="box-innit">
+            <img src="imagens/btnInnit.png" alt="logo">
+            <p class="center">Entrar</p>
+        </div>
+    </div>
+</div> -->
+<button id='runaway-btn' style="z-index: 50;"> &#129315;</button>
 <section class="bg-n1 main-box">
     <div class="scroll-n1">
         <div class="quadro-img">
@@ -17,18 +49,33 @@
         </div>
         <div class="info-page">
             <h3>Anderson Augusto Ferrari</h3><br>
-            <p>Campinas/SP</p>
-            <p>Analista de Sistemas</p>
-            <p>(19) 9 8779-3121</p>
+            <p>Programador Full-Stack </p>
+            <p>(19) 98779-3121</p>
             <p>andersonaugustoferrari@hotmail.com</p><br>
             <h4>Pontos fortes:</h4>
             <p>Sou muito dedicado e gosto de aprender.</p>
-            <div class="social">
-                <a href="https://www.facebook.com/anderson.augusto.3367/"><img src="imagens/facebook.png" width="55px"></a>
-                <a href="https://www.instagram.com/anderson_ferrari22/"><img src="imagens/instagram.png" width="55px"></a>
-                <a href="https://www.linkedin.com/in/anderson-ferrari-231577100/"><img src="imagens/linkedin.png" width="55px"></a>
-            </div>
         </div>
+    </div>
+    <div class="social">
+        <a target="_blank" href="https://www.facebook.com/anderson.augusto.3367/" >
+          <div class="social-btn color-telegram">
+            <div class="icons8-telegram-app"></div>
+            <a href="https://www.facebook.com/anderson.augusto.3367/"><span>Facebook</span><img src="imagens/facebook.png" width="55px">
+          </div>
+        </a>
+        <a href="https://www.instagram.com/anderson_ferrari22/">
+          <div class="social-btn color-instagram">
+            <div class="icons8-instagram"></div>
+           <a href="https://www.instagram.com/anderson_ferrari22/"><span>Instagram</span><img src="imagens/instagram.png" width="55px"></a>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/anderson-ferrari-231577100/">
+          <div class="social-btn color-whatsapp">
+            <div class="icons8-whatsapp"></div>
+            <a href="https://www.linkedin.com/in/anderson-ferrari-231577100/"><span>LinkedIn</span><img src="imagens/linkedin.png" width="55px">
+          </div>
+        </a>
+      </div>
     </div>
 </section>
 
@@ -77,20 +124,19 @@
         <div class="title-n2">
             <p class="colorWhite titleNv1">Entre em contato</p>
         </div>
-        <form action="https://api.staticforms.xyz/submit" method="post">
-            <input type="text" name="$name" placeholder="Seu nome">
-            <input type="text" name="$email" placeholder="Seu e-mail" />
-            <textarea name="$message" placeholder="Sua mensagem"></textarea>
-            <input type="text" name="honeypot" style="display:none">
-            <input type="hidden" name="accessKey" value="66be19c1-71fd-4177-9a7a-7ce21f00aec0">
-            <input type="hidden" name="subject" value="Anderson Augusto Ferrari" />
-            <input type="hidden" name="replyTo" value="@">
-            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/enviado.html">
-            <input type="submit" class="btnEnviar" value="Enviar" />
+        <form>
+            <input type="hidden" name="contact_number">
+            <label>Nome</label>
+            <input type="text" name="Nome" id="name">
+            <label>Título</label>
+            <input type="text" name="Título" id="title">
+            <label>Deixe sua mensagem</label>
+            <textarea name="Deixe uma mensagem" id="message"></textarea>
+            <button onclick="sendEmail()" type="button">Enviar </button>
         </form>
     </div>
 </section>
  
 </body>
-
+<script src="index.js"></script>
 </html>
