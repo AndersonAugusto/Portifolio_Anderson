@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>kanban</title>
+    <style>
+        body {
+            background-image: url('./bg.jpg');
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <section id="kanban">
+        <div class="column">
+            <div><h4>Backlog <span id="countBacklog"></span></h4></div>
+            <div id="backlog" >
+              
+            </div>
+        </div>
+        <div class="column">
+            <div><h4>Em desenvolvimento <span id="countDesenvolvimento"></span></h4></div>
+            <div id="desenvolvimento">
+
+            </div>
+        </div>
+        <div class="column">
+            <div><h4>Empedimento <span id="countEmpedimento"></span></h4></div>
+            <div id="empedimento">
+
+            </div>
+        </div>
+        <div class="column">
+            <div><h4>Concluído <span id="countConcluido"></span></h4></div>
+            <div id="concluido">
+
+            </div>
+        </div>
+        <div class="column">
+            <div><h4>Lixeira <span id="countLixeira"></span></h4></div>
+            <div id="lixeira">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="back" onclick="window.history.back()">
+        Voltar
+    </section>
+</body>
+<script src="./kanban.js"></script>
+</html>
