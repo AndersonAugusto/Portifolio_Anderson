@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Análise de teste</title>
+    <style>
+        body {
+            background-image: url('./bg.jpg');
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <section class="border section-1">
+        <div id="questions" class="border check-size children-one">
+           <!-- Renderiza quetionário -->
+        </div>
+        <!-- absolute -->
+        <div class="info" onclick="modalInfo()">
+            <img src="duvida.png" alt="info" width="32px">
+        </div>
+        <div id="orientation" class="orientation">
+            <h4>
+                Bem-vindo.
+            </h4>
+            <p>
+                Selecione as opções que representem as características do seu sistema, em seguida o software irá apresentar sugestões de testes considerados importantes para garantir a segurança do desenvolvimento.
+            </p>
+            <p>
+                Adicione as sugestões na coluna de backlog para disponibilizá-lo na interface de Kamban.
+            </p>
+        </div>
+        <!-- absolute -->
+        <div class="border check-size children-two">
+            <div id="cardsSugestions2">
+                <div><h4>Sugestões <span id="countBacklog2"></span></h4></div>
+                <div id="sugestaoList" class="listOne">
+                    <!-- Renderiza Sugestões -->
+                </div>
+            </div>
+            <div id="cardsSugestions">
+                <div><h4>Backlog <span id="countBacklog"></span></h4></div>
+                <div id="backlogList" class="listOne">
+                    <!-- Renderiza backlog -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="right-side">
+        <div class="Kanban">
+           <a href="./kanban.html" >
+            <img onclick="setBacklog()" src="./kanban.png" width="100%" alt="kanban">
+
+           </a>
+        </div>
+    </section>
+    <section class="back" onclick="window.history.back()">
+        Voltar
+    </section>
+</body>
+<script src="index.js"></script>
+</html>
