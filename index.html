@@ -31,7 +31,6 @@
 </head>
 <body>
 
-<button id='runaway-btn' style="z-index: 50;"> &#129315;</button>
 <section id="detail" class="bg-n1 main-box">
     <div class="scroll-n1">
         <div class="quadro-img">
@@ -43,7 +42,7 @@
             <p>(19) 9 8779-3121</p>
             <p>andersonaugustoferrari@hotmail.com</p><br>
             <h4>Sobre mim:</h4>
-            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAtualmente trabalho como desenvolvedor back-end, utilizando Node.js (Express) com arquitetura MVC.
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAtualmente trabalho como desenvolvedor Back-end, utilizando Node.js (Express) com arquitetura MVC.
                 Tenho grande experência com Front-end, sendo: HTML, CSS e Javascript. Também tenho conhecimento básico em desenvolvimento de SPA com os Frameworks: Angular, React.js e Vue.js. Trabalhei com plataformas de gerenciamento de projetos e sistema de versionamento, sendo: Github, Trello e Asana.
             </p>
         </div>
@@ -104,7 +103,7 @@
 </section>
 
 <section class="main-box">
-    <div class="scroll-n3">
+    <!-- <div class="scroll-n3">
         <div class="title-n2">
             <p class="colorWhite titleNv1">Projetos Realizados</p>
         </div>
@@ -115,7 +114,26 @@
             <a href="./predio/" ><div class="card">Prédio</div></a>
             <a href="./kanban-testes/" ><div class="card">Análise de testes</div></a>
         </div>
-    </div>
+    </div> -->
+    <div class="carousel">
+        <ul class="carousel__list">
+          <li class="carousel__item" data-pos="-2">
+            <a href="./botoes/">Botões</a>
+          </li>
+          <li class="carousel__item" data-pos="-1">
+            <a href="./listaDinamica/"><div>Lista dinâmica</div></a>
+          </li>
+          <li class="carousel__item" data-pos="0">
+            <a href="./jogoDaVelha/"><div>Jogo da Velha</div></a>
+          </li>
+          <li class="carousel__item" data-pos="1">
+            <a href="./predio/" ><div>Prédio</div></a>
+          </li>
+          <li class="carousel__item" data-pos="2">
+            <a href="./kanban-testes/" ><div>Análise de testes</div></a>
+          </li>
+        </ul>
+      </div>
 </section>
 
 <section class="main-box">
@@ -138,4 +156,5 @@
  
 </body>
 <script src="index.js"></script>
+<script src="carousel3d.js"></script>
 </html>
