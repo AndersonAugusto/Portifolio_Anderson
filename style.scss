@@ -340,20 +340,31 @@ body {
   border: 1px solid #2fe3ff;
   border-radius: 5px;
   padding: 30px;
-  margin-right: 50px;
-  width: 300px;
-  min-width: 300px;
-  height: 200px;
+  width: calc(100% / 5);
+  height: 300px;
+  min-width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 50px;
+  margin-bottom: 45px;
+  position: relative;
 }
-.btn-projects a {
-  text-decoration: none;
-  color:#fff;
-}
+
 .projects {
-  justify-content: flex-start;
-  overflow-x: auto;
-  flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .title-card {
+        position: absolute;
+        top: 0;
+        text-decoration: none;
+        color: #fff4f4;
+        background-color: #00000047;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
 }
+
+
