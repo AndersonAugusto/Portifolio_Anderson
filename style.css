@@ -468,10 +468,9 @@ body {
   border: 1px solid #2fe3ff;
   border-radius: 5px;
   padding: 30px;
-  margin-right: 50px;
-  width: 300px;
-  min-width: 300px;
-  height: 200px;
+  width: calc(100% / 5);
+  height: 300px;
+  min-width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,21 +480,30 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.btn-projects a {
-  text-decoration: none;
-  color: #fff;
+  margin-right: 50px;
+  margin-bottom: 45px;
+  position: relative;
 }
 
 .projects {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  overflow-x: auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.projects .title-card {
+  position: absolute;
+  top: 0;
+  text-decoration: none;
+  color: #fff4f4;
+  background-color: #00000047;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 /*# sourceMappingURL=style.css.map */
