@@ -11,21 +11,53 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: 0px 6px 10px -5px #00fff2;
           box-shadow: 0px 6px 10px -5px #00fff2;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #00fff247;
-  margin: 0 auto;
+  margin-left: 35px;
   padding: 20px;
+  width: 650px;
 }
 
 .formDinamica input {
   margin: 10px;
   height: 30px;
+}
+
+.listOfTask span {
+  color: #2dc5f3;
+}
+
+.listOfTask {
+  height: 100px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 9px;
+  list-style: none;
+  overflow-y: auto;
+  border: 1px solid #00fffd;
+  padding: 9px;
+  color: #00e2ff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 4px 1px #000;
+          box-shadow: 0px 0px 4px 1px #000;
+}
+
+.listOfTask p {
+  color: #fff;
+}
+
+.titleNv0 {
+  width: 700px;
+}
+
+#count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 .formDinamica label {
@@ -81,6 +113,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: auto;
@@ -89,15 +125,15 @@ body {
 #lista {
   list-style: none;
   border: 1px solid #00fff2;
-  width: 90%;
+  width: 650px;
   height: auto;
-  margin: 0 auto;
+  margin: 20px auto 0 35px;
   background-color: #00fff247;
   border-radius: 20px;
   height: 350px;
-  padding: 50px;
-  margin-top: 20px;
+  padding: 20px;
   overflow-x: auto;
+  position: relative;
 }
 
 .card {
@@ -118,5 +154,89 @@ body {
       justify-content: space-around;
   text-align: center;
   margin: 10px;
+}
+
+.limpar button {
+  width: 100%;
+  padding: 5px;
+  background-color: #0e8f1f;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.limpar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  padding: 5px;
+}
+
+.boxOfList {
+  width: 50vw;
+}
+
+.sidebar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  top: 0;
+  right: 0;
+}
+
+#description {
+  width: 81%;
+  height: 100px;
+}
+
+.alert {
+  display: block;
+  color: #fff;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 0;
+  padding: 50px;
+  top: 80%;
+  -webkit-animation: alertinha 5s alternate ease-in-out;
+          animation: alertinha 5s alternate ease-in-out;
+}
+
+@-webkit-keyframes alertinha {
+  0% {
+    left: -390px;
+  }
+  30% {
+    left: 60px;
+  }
+  75% {
+    left: 80px;
+  }
+  80% {
+    left: 60px;
+  }
+  100% {
+    left: -500px;
+  }
+}
+
+@keyframes alertinha {
+  0% {
+    left: -390px;
+  }
+  30% {
+    left: 60px;
+  }
+  75% {
+    left: 80px;
+  }
+  80% {
+    left: 60px;
+  }
+  100% {
+    left: -500px;
+  }
 }
 /*# sourceMappingURL=projeto2.css.map */

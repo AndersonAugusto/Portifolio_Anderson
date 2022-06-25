@@ -1,3 +1,7 @@
+body {
+  background-color: #83ab76;
+}
+
 .caixa-principal {
   width: 500px;
   height: 500px;
@@ -20,7 +24,10 @@
 .sub-caixa {
   width: calc(98.8% / 3);
   height: 33%;
-  border: 1px solid;
+  border: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
