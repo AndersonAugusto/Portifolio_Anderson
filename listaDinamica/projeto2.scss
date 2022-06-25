@@ -150,30 +150,32 @@ body{
 
   .alert {
     display: block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgb(27, 27, 27);;
     color:#fff;
-    border:1px solid #fff;
+    background-color:rgb(7, 79, 97);
     position: absolute;
-    left: 0;
+    right: 0;
     padding: 50px;
-    top: 80%;
+    top: 70%;
     animation: alertinha 5s alternate ease-in-out;
   }
 
 
   @keyframes alertinha {
       0% {
-        left: -390px;
+        right: -390px;
       }
       30% {
-        left: 60px;
+        right: 60px;
       }
       75% {
-        left: 80px;
+        right: 80px;
       }
       80% {
-        left: 60px;
+        right: 60px;
       }
       100% {
-        left: -500px;
+        right: -500px;
       }
   }
