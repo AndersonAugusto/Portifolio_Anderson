@@ -10,43 +10,98 @@
     <title>Lista dinâmica</title>
 </head>
 <body>
-    <h2 class="titleNv0 flexCenter" style="color:rgb(0, 255, 242);">Lista Dinâmica</h2>
-    <section class="sectionForm">
-        <form class="formDinamica flexAlignCenter">
-            <label>NOME:</label>
-            <input id="nome" type="text"/>
-            <label>E-MAIL:</label>
-            <input id="email" type="text"/>
-            <button type="button" id="none" onclick="enviarDados()" onmouseout="voltaText() "onmouseover="someText()"> <p style="color:black;">Adicionar</p> </button>
-        </form>
-    </section>
-    <section id="lista">
-        <ul id="listaInterna">
+    <script>
+        let cards = JSON.parse(localStorage.getItem('listOfTasks')) || []
+        onload = async () => {
+            await renderTask()
 
-        </ul>
+            let alert = document.getElementById('alert')
+
+            alert.style.display='block'.then(
+                setTimeout(() => {
+                    alert.style.display='none'
+                }, 4700)
+            )
+        }
+    </script>
+    <section class="boxOfList">
+        <section class="sectionForm">
+            <h2 class="titleNv0 flexCenter" style="color:rgb(0, 255, 242);">Lista Dinâmica</h2>
+            <form class="formDinamica flexAlignCenter">
+                <div class="d-flex inputs">
+                    <label>Titulo:</label>
+                    <input id="nome" type="text"/>
+                </div>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <button type="button" id="none" onclick="enviarDados()" > <p style="color:black;">Adicionar</p> </button>
+            </form>
+        </section>
+        <section id="lista">
+            <ul id="listaInterna">
+    
+            </ul>
+            <span id="count" style="color:#00fffe;"></span>
+        </section>
     </section>
     <div class="voltar">
         <button onclick="window.history.back()">Voltar</button>
     </div>
+    <div class="limpar">
+        <button onclick="clearStorege()">Limpar lista</button>
+    </div>
+    <!-- <section class="sidebar">
+        <div>
+
+        </div>       
+    </section> -->
+    <section id="alert" class="alert">
+        <p>Você pode montar uma lista de tarefas.</p>
+    </section>
 </body>
 <script>
-     enviarDados = () => {
-        let arrayCard = ['modelo', 'modelo2']
 
-        let listaInterna = document.getElementById('listaInterna').innerHTML;
-        let nome = document.getElementById('nome').value;
-        let email = document.getElementById('email').value;
 
-        listaInterna += "<li class='card'>"+"<p>" + nome + "</p>"+"<p>" + email + "</p>"+"</li>"
+    async function enviarDados() {
+        let nome = document.getElementById('nome').value
+        let description = document.getElementById('description').value
 
-        document.getElementById('listaInterna').innerHTML = listaInterna;
-        document.getElementById('nome').value = ''  
-        document.getElementById('email').value = ''        
-        
+        if(!nome || !description) {
+            return 
+        } else {
+            cards.push(
+                {
+                    nome: nome,
+                    description: description
+                }
+            )
+
+            document.getElementById('nome').value = ''  
+            document.getElementById('description').value = '' 
+            document.getElementById('listaInterna').innerHTML = ''
+
+            localStorage.setItem('listOfTasks' , JSON.stringify(cards))
+            await renderTask()
+        }
     }
-</script>
-<script>
-     someText = () => document.getElementById('none').textContent = ''
-     voltaText = () => document.getElementById('none').textContent = 'Adicionar'
+
+    function renderTask() {
+        document.getElementById('count').innerHTML = cards.length
+        cards.forEach(task => {
+            let modelTask = `
+            <li class="listOfTask" >  
+                <p> <span> Nome: </span> ${task.nome}</p>
+                <p> <span>Descrição: </span> ${task.description}</p>
+            </li>
+            `
+            document.getElementById('listaInterna').innerHTML += modelTask    
+        });
+    }
+
+    function clearStorege() {
+        document.getElementById('count').innerHTML = 0
+        document.getElementById('listaInterna').innerHTML = ''
+        localStorage.removeItem('listOfTasks')
+    }
+    
 </script>
 </html>
