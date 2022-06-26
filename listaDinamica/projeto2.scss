@@ -40,10 +40,23 @@ body{
 .titleNv0 {
   width: 700px;
 }
+#lista{
+  list-style: none;
+  border:1px solid rgb(0, 255, 242);;
+  width: 650px;
+  height: auto;
+  margin: 20px auto 0 35px;
+  background-color:  #00fff247;;
+  border-radius: 20px;
+  height: 350px;
+  padding: 20px;
+  overflow-x: auto;
+  position: relative;
+}
 #count {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 210px;
+  left: 45px;
 }
 .formDinamica label {
     color:#fff;
@@ -88,19 +101,7 @@ body{
     flex-wrap: wrap;
     height: auto;
 }
-#lista{
-    list-style: none;
-    border:1px solid rgb(0, 255, 242);;
-    width: 650px;
-    height: auto;
-    margin: 20px auto 0 35px;
-    background-color:  #00fff247;;
-    border-radius: 20px;
-    height: 350px;
-    padding: 20px;
-    overflow-x: auto;
-    position: relative;
-}
+
 .card{
     flex-direction: column;
     width: 47%;

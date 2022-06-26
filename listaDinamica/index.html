@@ -40,8 +40,8 @@
             <ul id="listaInterna">
     
             </ul>
-            <span id="count" style="color:#00fffe;"></span>
         </section>
+        <span id="count" style="color:#00fffe;"></span>
     </section>
     <div class="voltar">
         <button onclick="window.history.back()">Voltar</button>
@@ -98,6 +98,7 @@
     }
 
     function clearStorege() {
+        cards = []
         document.getElementById('count').innerHTML = 0
         document.getElementById('listaInterna').innerHTML = ''
         localStorage.removeItem('listOfTasks')
