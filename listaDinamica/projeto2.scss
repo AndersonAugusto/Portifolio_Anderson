@@ -1,12 +1,13 @@
 body{
     background-color: rgb(39, 39, 39);
+    overflow-x: hidden;
 }
 .sectionForm{
     width: 100%;
 }
 .formDinamica{
     border:1px solid rgb(0, 255, 242);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 6px 10px -5px rgb(0, 255, 242);
     flex-direction: column;
     background-color: #00fff247;;
@@ -17,6 +18,7 @@ body{
 .formDinamica input {
   margin: 10px;
   height: 30px;
+  border-radius: 5px;
 }
 
 .listOfTask span {
@@ -29,6 +31,7 @@ body{
   list-style: none;
   overflow-y: auto;
   border: 1px solid #00fffd;
+  background-color: #004343;
   padding: 9px;
   color: #00e2ff;
   border-radius: 5px;
@@ -44,20 +47,16 @@ body{
   list-style: none;
   border:1px solid rgb(0, 255, 242);;
   width: 650px;
-  height: auto;
   margin: 20px auto 0 35px;
   background-color:  #00fff247;;
-  border-radius: 20px;
-  height: 350px;
+  border-radius: 5px;
+  height: 300px;
+  max-height: 300px;
   padding: 20px;
   overflow-x: auto;
   position: relative;
 }
-#count {
-  position: absolute;
-  bottom: 210px;
-  left: 45px;
-}
+
 .formDinamica label {
     color:#fff;
     font-weight: bold;
@@ -66,7 +65,7 @@ body{
 .formDinamica button{
     width: 150px;
     height: 30px;
-    margin-top: 30px;
+    margin-top: 15px;
     font-weight: bold;
     border-radius: 5px;
     letter-spacing: 2px;
@@ -81,7 +80,7 @@ body{
     left: 0;
     top: 0;
     height: 100%;
-    transition: all 1s;
+    transition: all .0.5s;
     color:black;
     display: flex;
     align-items: center;
@@ -145,7 +144,8 @@ body{
   }
   #description {
     width: 81%;
-    height: 100px;
+    height: 60px;
+    border-radius: 5px;
   }
 
 

@@ -56,18 +56,6 @@ body{
     transition: all 0.2s;
     height: 264px;
 }
-@keyframes rodando {
-    0%{
-        transform: rotate3d(0, 0, 0, 0deg);
-    }
-    50%{
-        transform: rotate3d(100, 100, 150, 360deg);
-    }
-    100%{
-        transform: rotate3d(0, 0, 0, 45deg);
-    }
-}
-
 .box-innit {
     position: relative;
 }
@@ -101,4 +89,36 @@ body{
     background-color: rgba(0, 0, 0, 0);
 }
 
+
+
+.redondly {
+    border-radius: 50%;
+    background-color: #0000;
+    border: 4px solid grey;
+    border-right: 5px solid blue;
+    -webkit-animation: 1s loading infinite ease-out;
+    animation: 1s loading infinite ease-out;
+    width: 100px;
+    height: 100px;
+}
+#loading { 
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.499);
+    width: 100%;
+    height: 100vh;
+    z-index: 9000;
+}
+@keyframes loading {
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+
+
+
+.disabled {
+    opacity: 0.3;
+}
 

@@ -46,7 +46,6 @@ body {
 #questions {
     position: relative;
     height: 90vh;
-    border: 1px solid #a2a1a147;
     overflow-y: auto;
 }
 

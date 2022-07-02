@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+body {
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+::-webkit-scrollbar {
+  background-color: rgb(63, 63, 63);
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3bd9f0;
+  border-radius: 10px;
+}
+
+.voltar {
+  position: fixed;
+  bottom: 0;
+  width: 100px;
+  padding: 5px;
+}
+
+.voltar button {
+  width: 100%;
+  padding: 5px;
+  background-color: #0e8f1f;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #fff;
+  box-shadow: 0px 1px 4px 2px rgb(65, 65, 65);
+}
+
+#innit {
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.974);
+  justify-content: center;
+  align-items: center;
+}
+
+.animation {
+  color: white;
+  cursor: pointer;
+  font-size: 50px;
+  transition: all 0.2s;
+  height: 264px;
+}
+
+.box-innit {
+  position: relative;
+}
+
+.animation:hover {
+  box-shadow: 0px 0px 12px 2px #ff9d6f;
+  transform: scale(1.05);
+  transition: all 0.2s;
+  border-radius: 50%;
+}
+
+.animation p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+#runaway-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 4rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 5px transparent;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.redondly {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  border: 4px solid grey;
+  border-right: 5px solid blue;
+  -webkit-animation: 1s loading infinite ease-out;
+  animation: 1s loading infinite ease-out;
+  width: 100px;
+  height: 100px;
+}
+
+#loading {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.499);
+  width: 100%;
+  height: 100vh;
+  z-index: 9000;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.disabled {
+  opacity: 0.3;
+}/*# sourceMappingURL=global.css.map */
