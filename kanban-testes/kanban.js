@@ -113,7 +113,6 @@ async function nextIndex(element) {
     const index = element.value
     
     if(type === 'backlog') {
-        console.log(columnDesenvolvimento)
         columnDesenvolvimento.push(columnBacklog[index])
         columnBacklog.splice(index , 1)
 

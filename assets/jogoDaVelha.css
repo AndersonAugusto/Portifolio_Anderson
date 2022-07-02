@@ -1,0 +1,52 @@
+body {
+  background-color: #83ab76;
+}
+
+.caixa-principal {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid rgb(133, 65, 10);
+}
+
+.sub-caixa {
+  width: 32.9333333333%;
+  height: 33%;
+  border: inherit;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 120px;
+}
+
+.sucess {
+  background-color: rgba(0, 0, 0, 0.459);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.modalJogadorCampeao {
+  position: absolute;
+  border: 1px solid white;
+  box-shadow: 0px 0px 4px 1px black;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  top: 40%;
+  left: 50%;
+  background-color: #fff;
+  transform: translate(-50%);
+  border-radius: 10px;
+}
+
+.informacoes {
+  text-align: center;
+}/*# sourceMappingURL=jogoDaVelha.css.map */

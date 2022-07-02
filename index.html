@@ -4,32 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./paleta.css">
+    <link rel="stylesheet" href="assets/global.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/paleta.css">
     <title>Anderson</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
+   <script>
         (function() {
             emailjs.init('yrJ7LoiyBxJZSI8fH');
         })();
     </script>
    <script type="text/javascript">      
         function sendEmail(params){
+            document.getElementById('loading').style.display = 'flex'
             var tempParams = {
                 name: document.getElementById("name").value,
                 title: document.getElementById("title").value,
                 message: document.getElementById("message").value,
             };
-            emailjs.send('service_ftqwwl7' , 'template_mt2r5ca' , tempParams)
-            .then(function(res){
+            if(!tempParams.name || !tempParams.title || !tempParams.message){
+              document.getElementById('loading').style.display = 'none'
+              swal({
+                    title: "Preencha todos os campos.",
+                    icon: "error",
+                    timer: 5000,
+                });
+            } else {
+              emailjs.send('service_ftqwwl7' , 'template_mt2r5ca' , tempParams)
+              .then(function(res){
                 console.log("Sucess" , res.status)
+                document.getElementById('loading').style.display = 'none'
+                swal({
+                  title: "Enviado com sucesso.",
+                  icon: "success",
+                  timer: 3000,
+              });
             })
+          }
         }
     </script>
 </head>
 <body>
+  <div id="loading"><span class="redondly"></span></div>
 
 <section id="detail" class="bg-n1 main-box">
     <div class="scroll-n1">
@@ -138,6 +155,24 @@
               <div class="title-card">Plataforma de testes</div>
             </div>
           </a>
+          <a href="#" class="disabled">  
+            <div class="btn-projects">
+              <img src=""  width="180px" alt=""/>
+              <div class="title-card">Em breve</div>
+            </div>
+          </a>
+          <a href="#" class="disabled">  
+            <div class="btn-projects">
+              <img src=""  width="180px" alt=""/>
+              <div class="title-card">Em breve</div>
+            </div>
+          </a>
+          <a href="#" class="disabled">  
+            <div class="btn-projects">
+              <img src=""  width="180px" alt=""/>
+              <div class="title-card">Em breve</div>
+            </div>
+          </a>
      </div>
 </section>
 
@@ -154,11 +189,13 @@
             <input type="text" name="Título" id="title">
             <label>Deixe sua mensagem</label>
             <textarea name="Deixe uma mensagem" id="message"></textarea>
-            <button onclick="sendEmail()" type="button">Enviar </button>
+            <button onclick="sendEmail(); " type="button">Enviar </button>
         </form>
     </div>
 </section>
+
  
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="index.js"></script>
 </html>

@@ -4,62 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Análise de teste</title>
-    <style>
-        body {
-            background-image: url('./bg.jpg');
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="login.css">
+    <title>Acesso</title>
 </head>
 <body>
-    <section class="border section-1">
-        <div id="questions" class="border check-size children-one">
-           <!-- Renderiza quetionário -->
-        </div>
-        <!-- absolute -->
-        <div class="info" onclick="modalInfo()">
-            <img src="duvida.png" alt="info" width="32px">
-        </div>
-        <div id="orientation" class="orientation">
-            <h4>
-                Bem-vindo.
-            </h4>
-            <p>
-                Selecione as opções que representem as características do seu sistema, em seguida o software irá apresentar sugestões de testes considerados importantes para garantir a segurança do desenvolvimento.
-            </p>
-            <p>
-                Adicione as sugestões na coluna de backlog para disponibilizá-lo na interface de Kamban.
-            </p>
-        </div>
-        <!-- absolute -->
-        <div class="border check-size children-two">
-            <div id="cardsSugestions2">
-                <div><h4>Sugestões <span id="countBacklog2"></span></h4></div>
-                <div id="sugestaoList" class="listOne">
-                    <!-- Renderiza Sugestões -->
-                </div>
-            </div>
-            <div id="cardsSugestions">
-                <div><h4>Backlog <span id="countBacklog"></span></h4></div>
-                <div id="backlogList" class="listOne">
-                    <!-- Renderiza backlog -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="right-side">
-        <div class="Kanban">
-           <a href="./kanban.html" >
-            <img onclick="setBacklog()" src="./kanban.png" width="100%" alt="kanban">
+    
+    <div class="form-login">
+        <h2>Login</h2>
+        <input type="text" placeholder="Usuário" id="usuario">
+        <input type="password" placeholder="Senha" id="senha">
+        <button onclick="login()">Acessar</button>
+        <p>Acesso disponível para:</p>
+        <span><strong>Usuário:</strong> administrador</span>
+        <span><strong>Senha:</strong> 1234</span>
+    </div>
 
-           </a>
-        </div>
-    </section>
-    <section class="back" onclick="window.history.back()">
-        Voltar
-    </section>
 </body>
-<script src="index.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+
+let usuarios = [
+    {
+        login: 'administrador',
+        senha: '1234'
+    }
+]
+
+function login() {
+    const usuarioValue = document.getElementById('usuario').value
+    const senhaValue = document.getElementById('senha').value
+
+    usuarios.forEach(cadastro => {
+
+        if( cadastro.login.toLowerCase() === usuarioValue.toLowerCase() 
+         && cadastro.senha.toLowerCase() === senhaValue.toLowerCase()) {
+
+            var token = '';
+            for (var i = 80; i > 0; --i) token += (Math.floor(Math.random()*256)).toString(16);
+
+            const chave = {
+                token:token
+            }
+            localStorage.setItem('token' , JSON.stringify(chave))
+            window.location.href = 'home.html'
+
+        } else {
+            swal({
+                title: "Usuário ou senha inválido.",
+                icon: "error",
+                timer: 3000,
+            });
+        }
+    });
+}
+</script>
 </html>

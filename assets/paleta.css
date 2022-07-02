@@ -1,0 +1,31 @@
+/* COLORS */
+.colorWhite {
+  color: #fff;
+}
+
+.colorBlack {
+  color: #000;
+}
+
+/* Titulo */
+.titleNv0 {
+  font-size: 2rem;
+  padding: 15px;
+}
+
+.titleNv1 {
+  font-size: 1rem;
+  padding: 15px;
+}
+
+/* FLEX */
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.flexAlignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=paleta.css.map */

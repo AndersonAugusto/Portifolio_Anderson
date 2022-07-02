@@ -60,22 +60,22 @@ let AllTestes = [
 
 let quetions = [
     {
-        titulo: '1. Tipo de sistema é um E-commerce ?'
+        titulo: '1. O tipo de aplicação da sua empresa é um sistema e-commerce ?'
     },
     {
-        titulo: '2. Quantidade de usuário até 1000 ?'
+        titulo: '2.  O tipo de aplicação da sua empresa é um sistema ERP e/ou App Mobile?'
     },
     {
-        titulo: '3. Quantidade de usuário até 10.000 ?'
+        titulo: '3. A quantidade de usuários que sua empresa possui é de 50 a 500?'
     },
     {
-        titulo: '4. Quantidade de usuário acima de 10.000 ?'
+        titulo: '4. A quantidade de usuários que sua empresa possui é de +500?'
     },
     {
-        titulo: '5. Quantidade de produtos até 1000 ?'
+        titulo: '5. Sua aplicação possui mais de 2 processos sendo executados simultaneamente?'
     },
     {
-        titulo: '6. Quantidade de produtos até 10.000 ?'
+        titulo: '6. Sua empresa possui uma equipe especializada em testes de software?'
     },
     {
         titulo: '7. Quantidade de produtos acima de 10.000 ?'
@@ -84,31 +84,23 @@ let quetions = [
         titulo: '8. Será utilizado em dispositivos de pequeno desempenho ? '
     },
     {
-        titulo: ' questão à ser implementada '
+        titulo: 'Vazio'
     },
     {
-        titulo: ' questão à ser implementada '
+        titulo: 'Vazio'
     },
     {
-        titulo: ' questão à ser implementada '
+        titulo: 'Vazio'
     },
     {
-        titulo: ' questão à ser implementada '
-    },
-    {
-        titulo: ' questão à ser implementada '
-    },
-    {
-        titulo: ' questão à ser implementada '
+        titulo: 'Vazio'
     }
 ]
 
 let returnKanbanBacklog = JSON.parse(localStorage.getItem("columnBacklog")) || []
 const testesEscolhidos = []
 
-
 let columnBacklog = [...returnKanbanBacklog , ...testesEscolhidos]
-
 
 callQuestions()
 function callQuestions(){
@@ -119,7 +111,7 @@ function callQuestions(){
                 <p>${quetions[b].titulo}</p>
             </div>
             <div class="buttonsForm">
-                <input type="checkbox" name="${b}" onclick="getNumber(this)" value="${b}" data-nota="1">
+                <input type="checkbox" name="${b}" onclick="getNumber(this)"  value="${b}" data-nota="1">
             </div>
         </div>
         `
@@ -141,7 +133,7 @@ function renderBacklogInnit() {
                     </div>
                     <button id="left" onclick="backIndex(this)" value="${sugestions}" class="left-btn btn-innit2"> < </button>
                     <span class="selected" id="selected"> 
-                        <img src="checked.png" width="32px"/>
+                        <img src="../imagens/checked.png" width="32px"/>
                     </span>
                 </div>
             </div>
@@ -152,14 +144,20 @@ function renderBacklogInnit() {
 renderSugestoes()
 function renderSugestoes(){
     document.getElementById('sugestaoList').innerHTML = ""
-    document.getElementById('countBacklog2').innerText = `(${testesEscolhidos.length})`
-    for(let tipos = 0; tipos < testesEscolhidos.length; tipos++) {
+    
+    let testesEscolhidosFilter = testesEscolhidos.filter((ele , pos) => {
+        return testesEscolhidos.indexOf(ele) == pos
+    })
+    
+    document.getElementById('countBacklog2').innerText = `(${testesEscolhidosFilter.length})`
+
+    for(let tipos = 0; tipos < testesEscolhidosFilter.length; tipos++) {
         let sugestionsMolde = `
             <div class="column style">
                 <div id="backlog">
                         <div class="card-style innitBacklog" onclick="selectTest(this)" value="${tipos}">
-                        <h3>${testesEscolhidos[tipos].titulo}</h3>
-                        <p>${testesEscolhidos[tipos].descricao}</p>
+                        <h3>${testesEscolhidosFilter[tipos].titulo}</h3>
+                        <p>${testesEscolhidosFilter[tipos].descricao}</p>
                     </div>
                     <button id="right" onclick="nextIndex(this)" data-type="backlog" value="${tipos}" class="right-btn btn-innit"> > </button>
                 </div>
@@ -171,14 +169,25 @@ function renderSugestoes(){
 
 function getNumber(number){
     let indice = number.value
+    let checkbox = number
 
-    for(let verify = 0; verify < AllTestes.length; verify++){
-        let IdQuestao = AllTestes[verify].question
-        if(IdQuestao === parseInt(indice)){
-            testesEscolhidos.push(AllTestes[verify])
+    if (!checkbox.checked) {
+        for(let verify = 0; verify < AllTestes.length; verify++) {
+            let IdQuestao = AllTestes[verify].question
+            if(IdQuestao === parseInt(indice)) {
+                testesEscolhidos.splice(checkbox , 1)
+            }
         }
+        renderSugestoes()
+    } else {
+        for(let verify = 0; verify < AllTestes.length; verify++){
+            let IdQuestao = AllTestes[verify].question
+            if(IdQuestao === parseInt(indice)){
+                testesEscolhidos.push(AllTestes[verify])
+            }
+        }
+        renderSugestoes()
     }
-    renderSugestoes()
 }
 async function deleteCard(element) {
     let index = element.value
@@ -194,6 +203,7 @@ function setBacklog() {
 }
 async function nextIndex(element) {
     const index = element.value
+
     returnKanbanBacklog.push(testesEscolhidos[index])
     testesEscolhidos.splice(index , 1)
 

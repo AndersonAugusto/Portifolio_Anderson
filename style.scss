@@ -4,7 +4,7 @@
     background-size: cover;  
 }
 body {
-    background-image: url('./imagens/c.jpg');
+    background-image: url('../imagens/c.jpg');
 }
 
 .dropdown{
@@ -30,7 +30,7 @@ body {
     width: 250px;
     object-fit: cover;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 5%;
     left: 0px;
     top: 0px;
 }
@@ -333,7 +333,9 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
   }
-  
+  .btn-projects:hover {
+    transform: scale(1.05);
+  }
 
 .btn-projects {
   background-color: #057282;
