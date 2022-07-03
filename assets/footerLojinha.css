@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  background-color: #0d5962;
+  color: #fff;
+}
+.footer .centerFooter {
+  flex-direction: column;
+  text-align: center;
+  padding: 0 28px;
+}
+.footer .rightFooter {
+  flex-direction: column;
+}
+.footer .separation {
+  width: 33.3333333333%;
+  height: 160px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 430px) {
+  .footer .separation {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+  }
+}
+
+.voltarMercado {
+  padding-top: 3px;
+}
+
+.voltarMercado button {
+  padding: 0 5px;
+  border: none;
+  background-color: green;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(183, 183, 183);
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(125, 125, 125);
+}/*# sourceMappingURL=footerLojinha.css.map */
