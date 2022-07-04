@@ -5,7 +5,7 @@
 
 renderListOfProducts()
 function renderListOfProducts(){
-    document.getElementById('count').innerText = `Produtos quantidade: ( ${products.length} )`
+    document.getElementById('count').innerText = `Quantidade: ( ${products.length} )`
     let produtos = document.getElementById('listOfProducts')
 
     products.forEach(product => {
