@@ -24,7 +24,10 @@
         </section>
     </header>
     <body>
-
+        <div id="checkout" class="checkout">
+            
+            <span onclick="closeModal()" class="closeCheckout"> Fechar </span>
+        </div>
         <section class="products">
             <section id="menu">
                <div class="inputField">
@@ -33,13 +36,17 @@
                <div class="">
                     <button>Buscar</button>
                 </div>
+                <div id="carrinho">
+                    <img src="../../imagens/carrinho.png" onclick="showCheckout()" alt=""> 
+                    <span id="carrinhoCount">  </span>   
+                </div>
             </section>
             <div id="count"></div>
             <section id="listOfProducts">
                 
             </section>
         </section>
-            
+
     </body>
     <footer>
         <div class="bottom-bar"></div>

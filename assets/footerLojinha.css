@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: 1em;
   background-color: #0d5962;
   color: #fff;
 }

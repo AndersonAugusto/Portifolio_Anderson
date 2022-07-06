@@ -45,9 +45,15 @@
   flex-wrap: wrap;
 }
 
+#carrinho {
+  position: fixed;
+  right: 70px;
+  margin-top: 5px;
+}
+
 .card {
   width: 22.5%;
-  height: 350px;
+  height: 360px;
   border: 1px solid rgb(186, 186, 186);
   border-radius: 10px;
   box-shadow: 0px 0px 8px 0px #acacac;
@@ -88,6 +94,7 @@
 .card .description {
   padding: 0 10px;
   font-size: 13px;
+  line-height: 1.35;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -117,4 +124,29 @@
 #count {
   width: 85vw;
   margin: 0px auto 17px auto;
+}
+
+.checkout {
+  position: fixed;
+  right: 0;
+  top: 150px;
+  box-shadow: -3px 0px 5px 2px #e0e0e0;
+  width: 500px;
+  height: 80vh;
+  z-index: 9999;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: none;
+}
+.checkout .closeCheckout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border: 1px solid;
+  padding: 10px 0;
+  background-color: #025d54;
+  color: #fff;
+  border-bottom-left-radius: 10px;
 }/*# sourceMappingURL=products.css.map */
