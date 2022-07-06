@@ -1,14 +1,16 @@
 .navbar {
-    box-shadow: 0px 0px 5px 7px #24291d;
+    box-shadow:0px 0px 7px 3px #060606;
     width: 100%;
     list-style: none;
     display: flex;
     justify-content: space-around!important;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     z-index: 9999;
     background-color: #0d5962;
-    
+    li {
+        padding: 10px 0px;
+    }
     a {
         text-decoration: none;
         color:rgb(255, 255, 255);
