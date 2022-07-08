@@ -24,9 +24,17 @@
         </section>
     </header>
     <body>
-        <div id="checkout" class="checkout">
-            
-            <span onclick="closeModal()" class="closeCheckout"> Fechar </span>
+        <div id="fundoPreto">
+            <div id="modal" class="relative modal">
+                <div id="checkout" class="checkout">
+                    
+                </div> 
+                <div  class="closeCheckout">
+                    <div class="menuModal" id="valorTotal"></div>
+                    <div class="menuModal" onclick="clearCarrinho()">Limpar Carrinho</div>
+                    <div class="menuModal" onclick="closeModal()"> Fechar</div>
+                </div>
+            </div>
         </div>
         <section class="products">
             <section id="menu">
