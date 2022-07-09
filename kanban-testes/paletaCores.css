@@ -1,0 +1,178 @@
+
+body {
+    background-image: url('./img/bg.jpg');
+    overflow-y: hidden;
+}
+
+
+
+
+/* ####################### */
+/*      TELA DE LOGIN      */
+/* ####################### */
+.color-button-login {
+    background-color: #206662;
+    color: #fff;
+}
+.input-login {
+    background-color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
+}
+.title-login {
+    color: rgb(255, 255, 255);
+}
+.form-login {
+    background-color: #626262b8;
+    border:1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+/* ####################### */
+/* TELA DE CRIAR AMBIENTES */
+/* ####################### */
+
+.color-button-ambientes {
+    background-color: #003f40;
+    color:rgb(255, 255, 255);
+    border: 1px solid rgb(2, 153, 90);
+    box-shadow: -2px -1px 4px 4px #000000;
+}
+.modal-ambientes-button {
+    background-color: rgb(8, 68, 82);
+    color: #fff;
+    border-radius: 5px;
+}
+.modal-ambientes {
+    background-color: #003f40;
+    border: 1px solid rgb(0 150 108);
+    border-radius: 10px;
+    box-shadow: -3px 0px 9px 2px #000000;
+}
+.input-ambientes {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color:#000;
+}
+.modal-title-ambientes {
+    color:rgb(244, 244, 244);
+}
+.card-ambientes {
+    background-color: #1d7678;
+    color:#fff;
+    border: 1px solid #003400;
+    border-radius: 10px;
+    box-shadow: -4px 0px 7px 7px #000000;
+}
+
+
+
+
+
+
+
+
+/* ####################### */
+/*     TELA DE QUESTÔES    */
+/* ####################### */
+
+.questions-home {
+    border: 1px solid #595959a6;
+    background-color: #8f8f8f59;
+    color: #fff;
+}
+input[type='checkbox']::before {
+    content: ' ';
+    background-color: rgb(33 81 19);
+    border: 1px solid #1bc995;
+  }
+.input[type='checkbox']:checked::after {
+    content: ' ';
+    border-color: #61ff00;
+}
+.button-voltar-questions {
+    color:#fff;
+    background-color:rgb(83 83 83);
+}
+.modal-information {
+    border: 1px solid rgba(255, 255, 255, 0.614);
+    border-radius: 5px;
+    background-color:rgba(0, 0, 0, 0.929);
+    color: #fff;
+}
+.title-home {
+    color: #fff;
+}
+.card-home {
+    border-radius: 5px;
+    color: #000;
+    background-color: rgb(204 204 204);
+    box-shadow: 0px 1px 5px 1px rgb(0 0 0);
+}
+.close-btn-home {
+    background-color:rgb(192, 13, 13);
+    color:#fff;
+}
+.title-home-card {
+    color:#000;
+}
+.description-home-card {
+    color:#000;
+}
+.button-card-left-home {
+    background-color: #54838a;
+    color:#fff;
+}
+.button-card-right-home {
+    background-color: #54838a;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+/* ####################### */
+/*     TELA DE KANBAN      */
+/* ####################### */
+
+.column-kanban {
+    background-color: #ffffff33;
+}
+.card-kanban {
+    border-radius: 5px;
+    color: #000;
+    background-color: rgb(204 204 204);
+    box-shadow: 0px 1px 5px 1px rgb(0 0 0);
+}
+.close-btn-kanban{
+    background-color:rgb(192, 13, 13);
+    color:#fff;
+}
+.button-card-left-kanban {
+    background-color: #54838a;
+    color:#fff;
+}
+.button-card-right-kanban {
+    background-color: #54838a;
+    color:#fff;
+}
+.column-title-kanban {
+    color: rgb(255, 255, 255);
+}
+.button-voltar-kanban {
+    color:#fff;
+    background-color:rgb(83 83 83);
+}
+.color-fundo-kanban {
+    background-color:#000;
+    box-shadow: 0px 1px 4px 1px rgb(56, 56, 56);
+}

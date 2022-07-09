@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paletaCores.css">
     <link rel="stylesheet" href="styles.css">
     <title>Análise de teste</title>
-    <style>
-        body {
-            background-image: url('../imagens/bg.jpg');
-            color: #fff;
-        }
-    </style>
 </head>
 <body>
     
@@ -27,9 +22,9 @@
         </div>
         <!-- absolute -->
         <div class="info" onclick="modalInfo()">
-            <img src="../imagens/duvida.png" alt="info" width="32px">
+            <img src="img/duvida.png" alt="info" width="32px">
         </div>
-        <div id="orientation" class="orientation">
+        <div id="orientation" class="orientation modal-information">
             <h4>
                 Bem-vindo.
             </h4>
@@ -41,7 +36,7 @@
             </p>
         </div>
         <!-- absolute -->
-        <div class="border check-size children-two">
+        <div class="border check-size children-two title-home">
             <div id="cardsSugestions2">
                 <div><h4>Sugestões <span id="countBacklog2"></span></h4></div>
                 <div id="sugestaoList" class="listOne">
@@ -59,12 +54,12 @@
     <section class="right-side">
         <div class="Kanban">
            <a href="./kanban.html" >
-            <img onclick="setBacklog()" src="../imagens/kanban.png" width="100%" alt="kanban">
+            <img onclick="setBacklog()" src="img/kanban.png" width="100%" alt="kanban">
 
            </a>
         </div>
     </section>
-    <section class="back" onclick="window.history.back()">
+    <section class="back button-voltar-questions" onclick="window.history.back()">
         Voltar
     </section>
 </body>

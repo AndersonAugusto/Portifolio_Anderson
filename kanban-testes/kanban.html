@@ -5,13 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="paletaCores.css">
     <title>kanban</title>
-    <style>
-        body {
-            background-image: url('./bg.jpg');
-            color: #fff;
-        }
-    </style>
 </head>
 <body>
     <script>
@@ -19,40 +14,40 @@
             validaLogin()
         });
     </script>
-    <section id="kanban">
-        <div class="column">
-            <div><h4>Backlog <span id="countBacklog"></span></h4></div>
+    <section id="kanban" class="color-fundo-kanban">
+        <div class="column column-kanban">
+            <div><h4 class="column-title-kanban">Backlog <span id="countBacklog"></span></h4></div>
             <div id="backlog" >
               
             </div>
         </div>
-        <div class="column">
-            <div><h4>Em desenvolvimento <span id="countDesenvolvimento"></span></h4></div>
+        <div class="column column-kanban">
+            <div><h4 class="column-title-kanban">Em desenvolvimento <span id="countDesenvolvimento"></span></h4></div>
             <div id="desenvolvimento">
 
             </div>
         </div>
-        <div class="column">
-            <div><h4>Empedimento <span id="countEmpedimento"></span></h4></div>
+        <div class="column column-kanban">
+            <div><h4 class="column-title-kanban">Empedimento <span id="countEmpedimento"></span></h4></div>
             <div id="empedimento">
 
             </div>
         </div>
-        <div class="column">
-            <div><h4>Concluído <span id="countConcluido"></span></h4></div>
+        <div class="column column-kanban">
+            <div><h4 class="column-title-kanban">Concluído <span id="countConcluido"></span></h4></div>
             <div id="concluido">
 
             </div>
         </div>
-        <div class="column">
-            <div><h4>Lixeira <span id="countLixeira"></span></h4></div>
+        <div class="column column-kanban">
+            <div><h4 class="column-title-kanban">Lixeira <span id="countLixeira"></span></h4></div>
             <div id="lixeira">
 
             </div>
         </div>
     </section>
 
-    <section class="back" onclick="window.history.back()">
+    <section class="back button-voltar-kanban" onclick="window.history.back()">
         Voltar
     </section>
 </body>

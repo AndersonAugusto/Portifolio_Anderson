@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sections.css">
+    <link rel="stylesheet" href="paletaCores.css">
+    <title>Sessão</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            validaLogin()
+        });
+        
+    </script>
+    <section>
+
+        <div id="modalTitulo" class="modalTitulo">
+            <div class="cardCreate modal-ambientes">
+               <h2 class="modal-title-ambientes">Título do ambiente</h2>
+               <input id="inputTitulo" class="input-ambientes" type="text" placeholder="Titulo">
+               <button class="btnSalvar modal-ambientes-button" onclick="getValueCard()">Salvar</button>
+               <button onclick="closeCreate()" class="btnClose modal-ambientes-button">Cancelar</button>
+            </div>
+        </div>
+
+
+        <div id="sala" class="sala">
+
+        </div>
+        <div class="buttonCreate">
+            <button class="cria color-button-ambientes" onclick="openCreate()">
+                Criar ambiente
+            </button>
+            <button id="limpa" class="limpa color-button-ambientes" onclick="limpaTudo()">
+                Limpar tudo
+            </button>
+        </div>
+
+
+    </section>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="sections.js"></script>
+<script src="middleware.js"></script>
+</body>
+</html>

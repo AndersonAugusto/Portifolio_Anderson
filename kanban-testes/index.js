@@ -82,18 +82,6 @@ let quetions = [
     },
     {
         titulo: '8. Será utilizado em dispositivos de pequeno desempenho ? '
-    },
-    {
-        titulo: 'Vazio'
-    },
-    {
-        titulo: 'Vazio'
-    },
-    {
-        titulo: 'Vazio'
-    },
-    {
-        titulo: 'Vazio'
     }
 ]
 
@@ -106,7 +94,7 @@ callQuestions()
 function callQuestions(){
    for(let b = 0; b < quetions.length; b++){
         const moldeQuestion = `
-        <div class="options">
+        <div class="options questions-home">
             <div class="title"> 
                 <p>${quetions[b].titulo}</p>
             </div>
@@ -126,14 +114,14 @@ function renderBacklogInnit() {
         let sugestionsMolde = `
             <div class="column style">
                 <div id="backlog">
-                        <div class="card-style innitBacklog" onclick="selectTest(this)" value="${sugestions}">
-                        <button class="close-btn" onclick="deleteCard(this)" data-type="sugestion" value="${sugestions}"> x </button>
-                        <h3>${returnKanbanBacklog[sugestions].titulo}</h3>
-                        <p>${returnKanbanBacklog[sugestions].descricao}</p>
+                        <div class="card-style card-home innitBacklog" onclick="selectTest(this)" value="${sugestions}">
+                        <button class="close-btn close-btn-home" onclick="deleteCard(this)" data-type="sugestion" value="${sugestions}"> x </button>
+                        <h3 class="title-home-card">${returnKanbanBacklog[sugestions].titulo}</h3>
+                        <p class="description-home-card" >${returnKanbanBacklog[sugestions].descricao}</p>
                     </div>
-                    <button id="left" onclick="backIndex(this)" value="${sugestions}" class="left-btn btn-innit2"> < </button>
+                    <button id="left" onclick="backIndex(this)" value="${sugestions}" class="left-btn button-card-left-home btn-innit2"> < </button>
                     <span class="selected" id="selected"> 
-                        <img src="../imagens/checked.png" width="32px"/>
+                        <img src="img/checked.png" width="32px"/>
                     </span>
                 </div>
             </div>
@@ -155,18 +143,17 @@ function renderSugestoes(){
         let sugestionsMolde = `
             <div class="column style">
                 <div id="backlog">
-                        <div class="card-style innitBacklog" onclick="selectTest(this)" value="${tipos}">
-                        <h3>${testesEscolhidosFilter[tipos].titulo}</h3>
-                        <p>${testesEscolhidosFilter[tipos].descricao}</p>
+                        <div class="card-style card-home innitBacklog" onclick="selectTest(this)" value="${tipos}">
+                        <h3 class="title-home-card">${testesEscolhidosFilter[tipos].titulo}</h3>
+                        <p class="description-home-card">${testesEscolhidosFilter[tipos].descricao}</p>
                     </div>
-                    <button id="right" onclick="nextIndex(this)" data-type="backlog" value="${tipos}" class="right-btn btn-innit"> > </button>
+                    <button id="right" onclick="nextIndex(this)" data-type="backlog" value="${tipos}" class="right-btn btn-innit button-card-right-home"> > </button>
                 </div>
             </div>
         `
         document.getElementById('sugestaoList').innerHTML += sugestionsMolde
     }
 }
-
 function getNumber(number){
     let indice = number.value
     let checkbox = number

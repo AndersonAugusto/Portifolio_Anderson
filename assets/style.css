@@ -188,7 +188,7 @@ body {
   width: 90vw;
   height: auto;
   min-height: 250px;
-  border: 1px solidrgb(124, 124, 124);
+  border: 1px solid rgb(124, 124, 124);
   background-color: rgba(31, 31, 31, 0.492);
 }
 
