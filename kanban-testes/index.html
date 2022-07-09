@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paletaCores.css">
     <link rel="stylesheet" href="login.css">
     <title>Acesso</title>
 </head>
 <body>
-    
     <div class="form-login">
-        <h2>Login</h2>
-        <input type="text" placeholder="Usuário" id="usuario">
-        <input type="password" placeholder="Senha" id="senha">
-        <button onclick="login()">Acessar</button>
+        <h2 class="title-login">Login</h2>
+        <input class="input-login" type="text" placeholder="Usuário" id="usuario">
+        <input class="input-login" type="password" placeholder="Senha" id="senha">
+        <button class="color-button-login" onclick="login()">Acessar</button>
         <p>Acesso disponível para:</p>
         <span><strong>Usuário:</strong> administrador</span>
         <span><strong>Senha:</strong> 1234</span>
     </div>
-
 </body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
@@ -46,13 +45,13 @@ function login() {
                 token:token
             }
             localStorage.setItem('token' , JSON.stringify(chave))
-            window.location.href = 'home.html'
+            window.location.href = 'sections.html'
 
         } else {
             swal({
                 title: "Usuário ou senha inválido.",
                 icon: "error",
-                timer: 3000,
+                timer: 5000,
             });
         }
     });

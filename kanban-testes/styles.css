@@ -2,6 +2,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
 .check-size{
     width: 50%;
 }
@@ -54,15 +56,12 @@ input[type='checkbox']::before {
     width: 20px;
     height: 20px;
     position: absolute;
-    background-color: rgb(33 81 19);
-    border: 1px solid #14e900;
   }
   input[type='checkbox']:checked::after {
     content: ' ';
     width: 0.2rem;
     height: 1rem;
     margin-left: 0.5rem;
-    border-color: #61ff00;
     border-style: solid;
     border-width: 0 3px 3px 0;
     position: absolute;
@@ -91,8 +90,7 @@ input[type='checkbox']::before {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 5px;
-    border: 1px solid #595959a6;
-    background-color: #59595959;
+
 }
 .options input{
     border: 1px solid #009688;
@@ -106,16 +104,13 @@ input[type='checkbox']::before {
     background-color: #287f8a;
     cursor: pointer;
 }
-.innitBacklog {
-    color:#000;
-}
 
 .progressBar{
     width: 70%;
     padding: 10px;
     border-radius: 100px;
     text-align: center;
-    background-color:rgb(94, 93, 93)
+    background-color:rgb(255, 255, 255)
 }
 .Kanban {
     position: absolute;
@@ -123,7 +118,7 @@ input[type='checkbox']::before {
     right: 10px;
     width: 35px;
     height: 35px;
-    background-color: rgb(123, 123, 123);
+    background-color: rgb(216, 216, 216);
     cursor: pointer;
 }
 .selected {
@@ -152,16 +147,13 @@ input[type='checkbox']::before {
     height: 100%;
     margin: 0 10px 10px 10px;
     border-radius: 5px;
-    background-color: #ffffff33;
 }
 
 #kanban {
     border-radius: 5px;
-    box-shadow: 0px 1px 4px 1px rgb(56, 56, 56);
     width: 90vw;
     margin: 30px auto 0 auto;
     height: 88vh;
-    background-color:#000;
     padding: 10px;
     display: flex;
     overflow-x: auto;
@@ -203,8 +195,6 @@ input[type='checkbox']::before {
     bottom: 0;
     right: 0;
     width: 105px;
-    background-color: #54838a;
-    color: #fff;
     font-family: monospace;
     border: none;
     cursor: pointer;
@@ -214,8 +204,6 @@ input[type='checkbox']::before {
     bottom: 0;
     left: 0;
     width: 105px;
-    background-color: #54838a;
-    color:#fff;
     font-family: monospace;
     border: none;
     cursor: pointer;
@@ -241,26 +229,17 @@ input[type='checkbox']::before {
     margin: 10px;
     height: 135px;
     position: relative;
-    border-radius: 5px;
-    color: #000;
-    background-color: rgb(204 204 204);
     padding: 5px;
-    box-shadow: 0px 1px 5px 1px rgb(0 0 0);
 }
 
-#kanban h4 {
-    color: #fff;
-}
+
 .back { 
     position: absolute;
     padding: 5px 20px;
     bottom: 0;
     left: 0;
-    color:#fff;
     cursor: pointer;
     font-weight: 500;
-    opacity: 0.75;
-    background-color:rgb(83 83 83);
 }
 @media (max-width: 1024px) {
     .section-1{
@@ -279,8 +258,6 @@ input[type='checkbox']::before {
     right: 0;
     top: 0;
     border: none;
-    background-color:rgb(192, 13, 13);
-    color:#fff;
     cursor: pointer;
 }
 
@@ -292,15 +269,12 @@ input[type='checkbox']::before {
 
 .orientation {
     position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.614);
-    border-radius: 5px;
     right: 50px;
     bottom: 50px;
     width: 400px;
     height: 250px;
     padding: 10px;
     display: none;
-    background-color:rgba(0, 0, 0, 0.929);
 }
 .orientation p {
     font-size: 0.9rem;
