@@ -3,30 +3,45 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
-    overflow-x: hidden;
 }
 
 .buttonCreate {
-    width: 20%;
+    width: 350px;
     right: 0;
     float: right;
-    position: relative;
+    position: fixed;
+}
+.sala {
+    padding: 20px;
+    width: calc(100% - 350px);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow-y: auto;
 }
 
 .buttonCreate button {
-    width: 200px;
-
+    width: 13%;
     padding:  30px 10px;
     position: fixed;
     border-radius: 5px;
 }
 .buttonCreate .cria{
-    right: 70px;
-    bottom: 35px;
+    right: 40px;
+    bottom: 30px;
 }
 .buttonCreate .limpa{
-    right: 70px;
+    right: 40px;
     bottom: 130px;
+}
+.buttonCreate .desloga{
+    right: 40px;
+    bottom: 230px;
+}
+.buttonCreate .goBackPortifolio{
+    right: 40px;
+    bottom: 330px;
 }
 
 .buttonCreate button:hover {
@@ -35,16 +50,6 @@ body {
     transition: all .1s;
 }
 
-.sala {
-    padding: 20px;
-    width: 80%;
-    height: auto;
-    display: flex;
-    justify-content: flex-start;
-    min-height: 70vh;
-    flex-wrap: wrap;
-    gap: 30px;
-}
 
 .card {
     width: 250px;

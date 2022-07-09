@@ -1,7 +1,7 @@
 
 body {
-    background-image: url('./img/bg.jpg');
-    overflow-y: hidden;
+    /* background-image: url('./img/bg.jpg'); */
+    background-color: #263f5c;
 }
 
 
@@ -13,20 +13,28 @@ body {
 .color-button-login {
     background-color: #206662;
     color: #fff;
+    border: 1px solid #3f957d;
 }
 .input-login {
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(226, 226, 226);
     color: rgb(0, 0, 0);
 }
 .title-login {
     color: rgb(255, 255, 255);
 }
 .form-login {
-    background-color: #626262b8;
-    border:1px solid rgb(255, 255, 255);
+    background-color: #e4e4e417;
+    border: 1px solid rgb(38 64 59);
     border-radius: 5px;
 }
-
+.infor {
+    border: 1px solid #3f957d;
+    background-color: #206662;
+    color: #fff;
+}
+.infor strong , .infor p {
+    color:rgb(34, 34, 34);
+}
 
 
 
@@ -38,10 +46,10 @@ body {
 /* ####################### */
 
 .color-button-ambientes {
-    background-color: #003f40;
-    color:rgb(255, 255, 255);
-    border: 1px solid rgb(2, 153, 90);
-    box-shadow: -2px -1px 4px 4px #000000;
+    background-color: #00514d;
+    color: rgb(187 187 187);
+    border: 1px solid rgb(0 107 62);
+    box-shadow: -1px 0px 6px 2px #151515;
 }
 .modal-ambientes-button {
     background-color: rgb(8, 68, 82);
@@ -49,8 +57,8 @@ body {
     border-radius: 5px;
 }
 .modal-ambientes {
-    background-color: #003f40;
-    border: 1px solid rgb(0 150 108);
+    background-color:#00514d;
+    border: 1px solid rgb(0 107 62);
     border-radius: 10px;
     box-shadow: -3px 0px 9px 2px #000000;
 }
@@ -63,11 +71,11 @@ body {
     color:rgb(244, 244, 244);
 }
 .card-ambientes {
-    background-color: #1d7678;
+    background-color: #00514d;
     color:#fff;
     border: 1px solid #003400;
     border-radius: 10px;
-    box-shadow: -4px 0px 7px 7px #000000;
+    box-shadow: -1px 0px 6px 2px #151515;
 }
 
 
@@ -83,13 +91,13 @@ body {
 
 .questions-home {
     border: 1px solid #595959a6;
-    background-color: #8f8f8f59;
+    background-color: #00514d;
     color: #fff;
 }
 input[type='checkbox']::before {
     content: ' ';
-    background-color: rgb(33 81 19);
-    border: 1px solid #1bc995;
+    background-color: rgb(14 53 3);
+    border: 1px solid #00805b;
   }
 .input[type='checkbox']:checked::after {
     content: ' ';
@@ -97,7 +105,7 @@ input[type='checkbox']::before {
 }
 .button-voltar-questions {
     color:#fff;
-    background-color:rgb(83 83 83);
+    background-color:rgb(16, 79, 76);
 }
 .modal-information {
     border: 1px solid rgba(255, 255, 255, 0.614);
@@ -111,7 +119,7 @@ input[type='checkbox']::before {
 .card-home {
     border-radius: 5px;
     color: #000;
-    background-color: rgb(204 204 204);
+    background-color: #fff;
     box-shadow: 0px 1px 5px 1px rgb(0 0 0);
 }
 .close-btn-home {
@@ -145,7 +153,7 @@ input[type='checkbox']::before {
 /* ####################### */
 
 .column-kanban {
-    background-color: #ffffff33;
+    background-color: #ffffff4d;
 }
 .card-kanban {
     border-radius: 5px;
