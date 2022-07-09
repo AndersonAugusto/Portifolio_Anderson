@@ -58,13 +58,13 @@ renderCheckout()
 function renderCheckout(){
 
     if(carrinho.length < 1){
-        checkout.innerHTML = ' Vazio'
+        checkout.innerHTML = ' Vazio'.toUpperCase()
+        checkout.classList.add('vazioCarrinho')
         valorTotal.innerText = `R$ 0,00`
     } else {
-
+        checkout.classList.remove('vazioCarrinho')
         let count = 0
         carrinho.forEach(produtc => {
-            console.log(produtc.preco)
             count =  count + parseFloat(produtc.preco)
             
             let moldeCheckout = `
@@ -79,14 +79,15 @@ function renderCheckout(){
             `
             checkout.innerHTML += moldeCheckout
         });
-        valorTotal.innerText = `R$ ${count.toFixed(2)}` || 0
+        valorTotal.innerText = `R$ ${count},38` || 0
     }
 }
     
 function clearCarrinho(){
-    console.log('1')
     localStorage.removeItem('carrinhoLojinha')
     checkout.innerHTML = ""
+    document.location.reload(true);
+    checkout.classList.add('vazioCarrinho')
 }
 function closeModal(){
     checkout.classList.remove('showAnimation')
@@ -95,7 +96,6 @@ function closeModal(){
    
     setTimeout(() => {
         modal.style.display = 'none'
-        // checkout.style.display = 'none'
     }, 200)
 }
 function showCheckout(){

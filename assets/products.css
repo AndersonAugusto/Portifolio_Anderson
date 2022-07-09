@@ -315,4 +315,12 @@
 }
 .descriptionCheckout p {
   font-size: 0.8em;
+}
+
+.vazioCarrinho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  color: #c9c9c9;
 }/*# sourceMappingURL=products.css.map */
