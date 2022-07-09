@@ -4,6 +4,7 @@ body {
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 .form-login {
@@ -30,4 +31,12 @@ body {
     font-size: 1em;
     margin-top: 50px;
     cursor: pointer;
+}
+
+.infor {
+    padding: 10px;
+    position: absolute;
+    bottom: 70px;
+    font-size: 1.2em;
+    text-align: center;
 }

@@ -6,11 +6,18 @@ let sala = document.getElementById('sala')
 function openCreate() {
     modalTitulo.style.display = 'flex'
 }
-
 function closeCreate() {
     inputTitulo.value = ""
     modalTitulo.style.display = 'none'
 }
+function desloga() {
+    localStorage.removeItem('token')
+    window.location.href = '/kanban-testes/'
+}
+function gobackPortifolio() {
+    window.location.href = '/'
+}
+
 
 function limpaTudo(){
     swal({

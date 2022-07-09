@@ -36,7 +36,6 @@ body {
     align-items: flex-start;
 }
 .listOne {
-    border: 1px solid;
     width: 290px;
     min-width: 290px;
     padding-top: 9px;
@@ -56,6 +55,7 @@ input[type='checkbox']::before {
     width: 20px;
     height: 20px;
     position: absolute;
+    
   }
   input[type='checkbox']:checked::after {
     content: ' ';
@@ -90,7 +90,7 @@ input[type='checkbox']::before {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 5px;
-
+    min-height: 67px;
 }
 .options input{
     border: 1px solid #009688;
