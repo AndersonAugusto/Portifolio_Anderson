@@ -17,11 +17,15 @@ function renderListOfProducts(){
         let moldProducts = `
             <section class="card">
                 <img class="imgProduct" src="${product.imagem}" alt="">
-                <p class="title">${product.name}</p>
+                <div class="sku">
+                    <p class="title">${product.name}</p>
+                    <p> SKU: ${product.sku}</p>
+                </div>
                 <p class="description">${product.description} </p>
                 <button class="carrinho" onclick="addCarrinho(this)"
                     data-type="${product.name}" 
                     data-desc="${product.description}"
+                    data-sku="${product.sku}"
                     name="${product.preco}" 
                     value="${product.imagem}">
                     <img src="../../imagens/carrinho-de-compras.png" alt="">
@@ -40,8 +44,10 @@ function addCarrinho(element){
         imagem: element.value,
         name: element.dataset.type,
         preco: element.name,
-        description: element.dataset.desc
+        description: element.dataset.desc,
+        sku: element.dataset.sku
     }
+
     carrinho.push(cardSelected)
     carrinhoCount.innerText = carrinho.length
 
@@ -91,10 +97,10 @@ function clearCarrinho(){
 }
 function closeModal(){
     checkout.classList.remove('showAnimation')
-    fundoPreto.classList.remove('fundoPreto')
     checkout.classList.add('closeAnimation')
-   
+    
     setTimeout(() => {
+        fundoPreto.classList.remove('fundoPreto')
         modal.style.display = 'none'
     }, 200)
 }
@@ -105,3 +111,5 @@ function showCheckout(){
     checkout.classList.add('showAnimation')
     fundoPreto.classList.add('fundoPreto')
 }
+
+
