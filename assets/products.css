@@ -323,4 +323,9 @@
   align-items: center;
   font-size: 3em;
   color: #c9c9c9;
+}
+
+.sku {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=products.css.map */

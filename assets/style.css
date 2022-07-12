@@ -53,20 +53,16 @@ body {
     align-items: center;
     margin: 40px;
   }
-
   .skills-n2 {
     flex-direction: column;
   }
-
   .quadro-img {
     padding-bottom: 50px;
   }
-
   .info-page {
     width: 100% !important;
     align-items: center;
   }
-
   .info-page p {
     text-align: center !important;
   }
