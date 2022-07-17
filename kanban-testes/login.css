@@ -5,6 +5,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     height: 100vh;
     overflow-y: hidden;
+    flex-direction: column;
 }
 
 .form-login {
@@ -35,8 +36,7 @@ body {
 
 .infor {
     padding: 10px;
-    position: absolute;
-    bottom: 70px;
+    margin-top: 10px;
     font-size: 1.2em;
     text-align: center;
 }

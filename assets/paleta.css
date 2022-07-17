@@ -28,4 +28,76 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  background-color: rgba(31, 31, 31, 0.492);
+  color: #fff;
+}
+
+.container-top {
+  background-color: rgba(19, 19, 19, 0.7176470588);
+}
+
+.size-of-bar {
+  border-radius: 7px;
+  padding: 5px 0;
+}
+
+#html {
+  background: -webkit-linear-gradient(left, #057282 90.2%, #000 13.2%);
+}
+
+#css {
+  background: -webkit-linear-gradient(left, #057282 80.2%, #000 13.2%);
+}
+
+#js {
+  background: -webkit-linear-gradient(left, #057282 78.2%, #000 13.2%);
+}
+
+#boots {
+  background: -webkit-linear-gradient(left, #057282 75.2%, #000 13.2%);
+}
+
+#react {
+  background: -webkit-linear-gradient(left, #057282 25.2%, #000 13.2%);
+}
+
+#angular {
+  background: -webkit-linear-gradient(left, #057282 15.2%, #000 13.2%);
+}
+
+#git {
+  background: -webkit-linear-gradient(left, #057282 75.2%, #000 13.2%);
+}
+
+#eng {
+  background: -webkit-linear-gradient(left, #057282 65.2%, #000 13.2%);
+}
+
+#jquery {
+  background: -webkit-linear-gradient(left, #057282 25.2%, #000 13.2%);
+}
+
+#flex {
+  background: -webkit-linear-gradient(left, #057282 75.2%, #000 13.2%);
+}
+
+#sql {
+  background: -webkit-linear-gradient(left, #057282 70.2%, #000 13.2%);
+}
+
+#node {
+  background: -webkit-linear-gradient(left, #057282 60.2%, #000 13.2%);
+}
+
+.card-fundo {
+  background-color: #057282;
+  border: 1px solid #2fe3ff;
+}
+
+.card-titulo {
+  color: #fff4f4;
+  background-color: rgba(0, 0, 0, 0.2784313725);
 }/*# sourceMappingURL=paleta.css.map */
