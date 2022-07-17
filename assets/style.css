@@ -79,8 +79,6 @@ body {
   flex-direction: column;
   align-items: left;
   padding: 30px;
-  color: #fff;
-  background-color: rgba(5, 5, 5, 0.3098039216);
   position: relative;
   width: 50%;
 }
@@ -96,16 +94,11 @@ body {
 }
 
 /* NIVEL 2 */
-.title-n2 {
-  background-color: rgba(19, 19, 19, 0.7176470588);
-}
-
 .scroll-n2 {
   width: 90vw;
   height: auto;
   margin: 0 0 30px 0;
   border: 1px solidrgb(124, 124, 124);
-  background-color: rgba(31, 31, 31, 0.492);
 }
 
 .scroll-n2 h1 {
@@ -115,7 +108,6 @@ body {
 }
 
 .skill-bar {
-  border-radius: 50px;
   width: 300px;
   color: #FFFFFF;
   font-style: italic;
@@ -129,54 +121,6 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-}
-
-#html {
-  background: -webkit-linear-gradient(left, #057282 90.2%, #000 13.2%);
-}
-
-#css {
-  background: -webkit-linear-gradient(left, #057282 80.2%, #000 13.2%);
-}
-
-#js {
-  background: -webkit-linear-gradient(left, #057282 78.2%, #000 13.2%);
-}
-
-#boots {
-  background: -webkit-linear-gradient(left, #057282 75.2%, #000 13.2%);
-}
-
-#react {
-  background: -webkit-linear-gradient(left, #057282 25.2%, #000 13.2%);
-}
-
-#angular {
-  background: -webkit-linear-gradient(left, #057282 15.2%, #000 13.2%);
-}
-
-#git {
-  background: -webkit-linear-gradient(left, #057282 75.2%, #000 13.2%);
-}
-
-#eng {
-  background: -webkit-linear-gradient(left, #057282 65.2%, #000 13.2%);
-}
-
-#jquery {
-  background: -webkit-linear-gradient(left, #057282 25.2%, #000 13.2%);
-}
-
-#flex {
-  background: -webkit-linear-gradient(left, #057282 75.2%, #000 13.2%);
-}
-
-#sql {
-  background: -webkit-linear-gradient(left, #057282 70.2%, #000 13.2%);
-}
-
-#node {
-  background: -webkit-linear-gradient(left, #057282 60.2%, #000 13.2%);
 }
 
 /* SCROLL 3 */
@@ -392,8 +336,6 @@ body {
 }
 
 .btn-projects {
-  background-color: #057282;
-  border: 1px solid #2fe3ff;
   border-radius: 5px;
   padding: 30px;
   width: 20%;
@@ -416,8 +358,6 @@ body {
   position: absolute;
   top: 0;
   text-decoration: none;
-  color: #fff4f4;
-  background-color: rgba(0, 0, 0, 0.2784313725);
   width: 100%;
   text-align: center;
   padding: 10px 0;

@@ -4,6 +4,7 @@
 .colorBlack{color:#000};
 
 
+
 /* Titulo */
 
 .titleNv0{font-size: 2rem; padding: 15px;}
@@ -14,3 +15,43 @@
 
 .flexCenter{display: flex; justify-content: center;}
 .flexAlignCenter{display: flex; justify-content: center; align-items: center;}
+
+
+//PAGINA INICIAL 
+
+.container {
+    background-color: rgba(31, 31, 31, 0.492);
+    color: #fff;
+}
+
+.container-top {
+    background-color:#131313b7;
+}
+
+.size-of-bar {
+    border-radius: 7px;
+    padding: 5px 0;
+}
+
+#html{background: -webkit-linear-gradient(left, #057282  90.20%, #000 13.20%);}
+#css{background: -webkit-linear-gradient(left, #057282  80.20%, #000 13.20%);}
+#js{background: -webkit-linear-gradient(left, #057282  78.20%, #000 13.20%);}
+#boots{background: -webkit-linear-gradient(left, #057282  75.20%, #000 13.20%);}
+#react{background: -webkit-linear-gradient(left, #057282  25.20%, #000 13.20%);}
+#angular{background: -webkit-linear-gradient(left, #057282  15.20%, #000 13.20%);}
+#git{background: -webkit-linear-gradient(left, #057282  75.20%, #000 13.20%);}
+#eng{background: -webkit-linear-gradient(left, #057282  65.20%, #000 13.20%);}
+#jquery{background: -webkit-linear-gradient(left, #057282  25.20%, #000 13.20%);}
+#flex{background: -webkit-linear-gradient(left, #057282  75.20%, #000 13.20%);}
+#sql{background: -webkit-linear-gradient(left, #057282  70.20%, #000 13.20%);}
+#node{background: -webkit-linear-gradient(left, #057282  60.20%, #000 13.20%);}
+
+
+.card-fundo {
+    background-color: #057282;
+    border: 1px solid #2fe3ff;
+}
+.card-titulo {
+    color: #fff4f4;
+    background-color: rgba(0, 0, 0, 0.2784313725);
+}
