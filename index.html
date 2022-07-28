@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/paleta.css">
     <title>Anderson</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
    <script>
         (function() {
@@ -49,11 +50,11 @@
   <div id="loading"><span class="redondly"></span></div>
 
 <section id="detail" class="bg-n1 main-box">
-    <div class="scroll-n1">
+    <div class="scroll-n1 ">
         <div class="quadro-img">
             <img class="perfil-photo" src="imagens/ander.png">
         </div>
-        <div id="info-anima" class="info-page container">
+        <div id="info-anima" class="info-page container anime-right">
             <h3>Anderson Augusto Ferrari</h3><br>
             <p>Programador Full-Stack </p>
             <p>(19) 9 8779-3121</p>
@@ -93,7 +94,7 @@
     </div>
 </section>
 
-<section class="main-box">
+<section class="main-box anime-opacity-left">
     <div class="scroll-n2">
         <div class="title-n2 container-top">
             <h1 class="colorWhite titleNv1">Habilidades</h1>
@@ -119,7 +120,7 @@
     </div>
 </section>
 
-<section class="main-box">
+<section class="main-box anime-opacity-right">
   <div class="scroll-n2 container">
     <div class="title-n2 container-top">
         <h1 class="colorWhite titleNv1">Projetos</h1>
@@ -157,7 +158,7 @@
           </a>
           <a href="./loja/">  
             <div class="btn-projects card-fundo">
-              <img src="./imagens/mercado.png" width="180px" alt=""/>
+              <img src="./imagens/mercado.png" width="180px" alt="mercado"/>
               <div class="title-card card-titulo">Mercado</div>
             </div>
           </a>
@@ -176,7 +177,7 @@
      </div>
 </section>
 
-<section class="main-box">
+<section class="main-box anime-opacity-left">
     <div class="scroll-n4 container">
         <div class="title-n2 container-top">
             <p class="colorWhite titleNv1">Entre em contato</p>
@@ -195,5 +196,6 @@
 </section>
  
 </body>
+<script src="animation.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>
