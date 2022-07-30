@@ -2,73 +2,81 @@
 
 let tabuleiro = document.getElementById('tabuleiro')
 
-let sequenciaJogador1 = []
-let sequenciaJogador2 = []
 let letraInicial = 'X'
 
-let letras = [letraInicial]
+const box1 = [] , box2 = [] , box3 = [] ,
+      box4 = [] , box5 = [] , box6 = [] ,
+      box7 = [] , box8 = [] , box9 = []
 
-let combinacoes = [
-    '123','456','789','147','258','369','159','753',
-    '132','465','798','174','285','396','195','735',
-    '231','564','879','417','825','639','519','375',
-    '213','546','897','471','852','693','591','357',
-    '312','646','987','741','528','963','915','573',
-    '321','664','978','714','582','936','951','537'
-]
-function verificaCombinacao1(){
-    for(let sequenciaJogador = 0; sequenciaJogador < sequenciaJogador1.length; sequenciaJogador++){
-        for(let combinacao = 0; combinacao < combinacoes.length; combinacao++){
-            let chances = combinacoes[combinacao]
-            let pontoJogador = sequenciaJogador1.toString()
-            let sequenciaJogador = pontoJogador.replace(',','').replace(',','').replace(',','').replace(',','').replace(',','').replace(',','')
-    
-            if(sequenciaJogador.includes(chances)){
-                // alert(' Jogador 1 venceu! =D ')
-                document.getElementById('campoSucess').style.display = "block"
-                document.getElementById('jogador').innerText = "Parabéns jogador 1"
-                setTimeout(() => resetaJogo() , 2500);
-            }
+let letras = [letraInicial]
+let placarStorageOne = parseInt(localStorage.getItem('placarOne')) || 0
+let placarStorageTwo = parseInt(localStorage.getItem('placarTwo')) || 0
+
+document.getElementById('playerOne').innerHTML = placarStorageOne
+document.getElementById('playerTwo').innerHTML = placarStorageTwo
+
+function winner(){
+    const letterWinner = verifyCombinations()
+    const textVictory = document.getElementById('text')
+
+    if(letterWinner === 'X'){
+        
+        document.getElementById('campoSucess').style.display = 'block'
+        textVictory.innerHTML = "Very good! player one"
+        
+        let placarOne = [placarStorageOne + 1]
+        localStorage.setItem('placarOne' , placarOne)
+
+        setTimeout(() => window.location.reload() , 2500)
+
+    } else if(letterWinner === 'O') {
+
+        document.getElementById('campoSucess').style.display = 'block'
+        textVictory.innerHTML = "Very good! Player two"
+
+        let placarTwo = [placarStorageTwo + 1]
+        localStorage.setItem('placarTwo' , placarTwo)
+
+        setTimeout(() => window.location.reload() , 2500)
+
+    } else if(
+        box1[0] && box2[0] && box3[0] &&
+        box4[0] && box5[0] && box6[0] &&
+        box7[0] && box8[0] && box9[0] ) {
+            document.getElementById('campoSucess').style.display = 'block'
+            textVictory.innerHTML = "Ops! Deu velha :("
+            setTimeout(() => window.location.reload() , 2500)
         }
+    else {
+        console.log('Analizing...')
     }
+
 }
-function verificaCombinacao2(){
-    for(let sequenciaJogador = 0; sequenciaJogador < sequenciaJogador2.length; sequenciaJogador++){
-        for(let combinacao = 0; combinacao < combinacoes.length; combinacao++){
-            let chances = combinacoes[combinacao]
-            let pontoJogador = sequenciaJogador2.toString()
-            let sequenciaJogador = pontoJogador.replace(',','').replace(',','').replace(',','').replace(',','').replace(',','').replace(',','')
-    
-            if(sequenciaJogador.includes(chances)){
-                document.getElementById('campoSucess').style.display = "block"
-                document.getElementById('jogador').innerText = "Parabéns jogador 2"
-                setTimeout(() =>  resetaJogo(), 2500);
-            }
-        }
-    }
-}
+
 
 jogoDaVelha()
 async function jogoDaVelha(){
     tabuleiro.addEventListener('click' , (e) => {
         let id = e.target.id
         let box = e.target
+
+
         if(box.innerHTML.length < 1){
             if(id){        
                 if(letras[0] == 'X'){
                     box.innerHTML = letras[0]
-                    sequenciaJogador1.push(id)
-                    
+                    insertLetter(id)
+
                     letras.pop()
                     letras.push('O')
-                    verificaCombinacao1()
+                    winner()
                 } else {
                     box.innerHTML = letras[0]
-                    sequenciaJogador2.push(id)
-                    
+                    insertLetter(id)
+
                     letras.pop()
                     letras.push('X')
-                    verificaCombinacao2()
+                    winner()
                 } 
             }
         }
@@ -79,4 +87,86 @@ async function jogoDaVelha(){
 //RESETA JOGO
 function resetaJogo(){
     window.location.reload()
+    localStorage.removeItem('placarOne')
+    localStorage.removeItem('placarTwo')
 } 
+
+function insertLetter(id) {
+    switch(id){
+        case "1":
+            if(!box1[0]) box1.push(letras[0])
+        break;
+        case "2":
+            if(!box2[0]) box2.push(letras[0])
+        break;
+        case "3":
+            if(!box3[0]) box3.push(letras[0])
+        break;
+        case "4":
+            if(!box4[0]) box4.push(letras[0])
+        break;
+        case "5":
+            if(!box5[0])box5.push(letras[0])
+        break;
+        case "6":
+            if(!box6[0]) box6.push(letras[0])
+        break;
+        case "7":
+            if(!box7[0]) box7.push(letras[0])
+        break;
+        case "8":
+            if(!box8[0]) box8.push(letras[0])
+        break;
+        case "9":
+            if(!box9[0]) box9.push(letras[0])
+        break;
+    }
+}
+
+function verifyCombinations(){
+
+    let letterChampion = []
+
+    if(box1[0] || box2[0] || box3[0]){
+        if(box1[0] === box2[0] && box2[0] === box3[0]){
+            letterChampion = box1[0]
+        }
+    }
+    if(box4[0] || box5[0] || box6[0]){
+        if(box4[0] === box5[0] && box5[0] === box6[0]){
+            letterChampion = box4[0]
+        }
+    }
+    if(box7[0] || box8[0] || box9[0]){
+        if(box7[0] === box8[0] && box8[0] === box9[0]){
+            letterChampion = box7[0]
+        }
+    }
+    if(box1[0] || box4[0] || box7[0]){
+        if(box1[0] === box4[0] && box4[0] === box7[0]){
+            letterChampion = box1[0]
+        }
+    }
+    if(box2[0] || box5[0] || box8[0]){
+        if(box2[0] === box5[0] && box5[0] === box8[0]){
+            letterChampion = box2[0]
+        }
+    }
+    if(box3[0] || box6[0] || box9[0]){
+        if(box3[0] === box6[0] && box6[0] === box9[0]){
+            letterChampion = box3[0]
+        }
+    }
+    if(box1[0] || box5[0] || box9[0]){
+        if(box1[0] === box5[0] && box5[0] === box9[0]){
+            letterChampion = box1[0]
+        }
+    }
+    if(box7[0] || box5[0] || box3[0]){
+        if(box7[0] === box5[0] && box5[0] === box3[0]){
+            letterChampion = box7[0]
+        }
+    }
+
+    return letterChampion
+}
