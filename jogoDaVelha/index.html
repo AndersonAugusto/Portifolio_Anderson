@@ -9,7 +9,7 @@
     <title>Jogo da velha</title>
 </head>
 <body>
-    <div id="tabuleiro" class="caixa-principal" style="margin-top: 5%;">
+    <div id="tabuleiro" class="caixa-principal" style="margin-top: 2%;">
         <div id="1" class="sub-caixa" value="1" ></div>
         <div id="2" class="sub-caixa" value="2"></div>
         <div id="3" class="sub-caixa" value="3"></div>
@@ -22,11 +22,16 @@
         <div id="8" class="sub-caixa" value="8"></div>
         <div id="9" class="sub-caixa" value="9"></div>
     </div>
+    
     <div class="informacoes">
-        <h3 style="margin: 20px 0;">Observações:</h3>
-        <span>O Jogador 1 é o <strong>X</strong></span><br>
-        <span>O Jogador 2 é o <strong>O</strong></span>
+        <div class="points">
+            <span class="playerPoints">Player One: <p id="playerOne"></p></span>
+            <span class="playerPoints">Player Two: <p id="playerTwo"></p></span>
+        </div>
+
+        <p><strong>Observações: </strong><br> A partida sempre irá começar com o X</p>
     </div>
+    
     <div class="voltar">
         <button onclick="window.history.back()">Voltar</button>
     </div>
@@ -34,8 +39,10 @@
         <button onclick="resetaJogo()">Resetar</button>
     </div>
     <div id="campoSucess" class="sucess">
-        <h1 id="jogador" class="modalJogadorCampeao"></h1>
+        <h1 id="text" class="modalJogadorCampeao"></h1>
     </div>
+
+
 </body>
 <script src="./jogoDaVelha.js"></script>
 </html>
