@@ -1,6 +1,12 @@
 body {
     background-color: #000000;
 }
+
+#tabuleiro {
+    background-image: url('https://media.istockphoto.com/photos/chalkboard-ticktacktoe-background-picture-id946399874?k=20&m=946399874&s=612x612&w=0&h=vMiShPg31yOSqyZ16l_8gSQ_k7RGEInr2rOF9NLBPuQ=');
+    background-size: cover;
+}
+
 .caixa-principal {
     width: 500px;
     height: 500px;
@@ -10,7 +16,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 10px solid rgb(29 167 215)
 }
 .sub-caixa{
     width: calc(98.8% / 3);
@@ -19,7 +24,8 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-    font-size: 120px;
+    font-size: 85px;
+    font-family: cursive!important;
     color: #fff;
 }
 .sucess{
@@ -57,7 +63,7 @@ body {
 }
 
 .points {
-    border: 5px solid rgb(29 167 215);
+    border: 5px solid rgb(135 135 135);
     width: 100%;
     display: flex;
     justify-content: space-between;
