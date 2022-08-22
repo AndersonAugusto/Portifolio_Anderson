@@ -109,7 +109,7 @@ body {
 
 .skill-bar {
   width: 300px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-style: italic;
   text-align: center;
   background: #ff4800;
@@ -332,7 +332,7 @@ body {
 }
 
 .btn-projects:hover {
-  transform: scale(1.05);
+  background-color: #0d5d69;
 }
 
 .btn-projects {
@@ -344,9 +344,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 50px;
-  margin-bottom: 45px;
   position: relative;
+  margin: 30px auto 0 auto;
 }
 
 .projects {
@@ -361,4 +360,40 @@ body {
   width: 100%;
   text-align: center;
   padding: 10px 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.owl-nav button.owl-prev {
+  left: 0;
+}
+
+.owl-nav button.owl-next {
+  right: 0;
+}
+
+.owl-nav button {
+  position: absolute;
+  transform: translateY(-50%);
+  background: rgba(19, 19, 19, 0.7176470588) !important;
+}
+
+.owl-nav span {
+  font-size: 70px;
+  position: relative;
+  top: -10px;
+}
+
+.owl-nav button:focus {
+  outline: none;
+}
+
+/* PROGRESS SCROLL *//*# sourceMappingURL=style.css.map */
