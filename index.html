@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/paleta.css">
+    <link rel="icon" href="./imagens/ander_ico.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>Anderson</title>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
    <script>
@@ -47,7 +49,11 @@
     </script>
 </head>
 <body id="all">
-  <div id="loading"><span class="redondly"></span></div>
+
+<!-- ABSOLUTE ELEMENTS -->
+<div id="loading"><span class="redondly"></span></div>
+<!-- <div id="progresScroll"></div> -->
+
 
 <section id="detail" class="bg-n1 main-box">
     <div class="scroll-n1 ">
@@ -55,14 +61,15 @@
             <img class="perfil-photo" src="imagens/ander.png">
         </div>
         <div id="info-anima" class="info-page container anime-right">
-            <h3>Anderson Augusto Ferrari</h3><br>
+           <h3>Anderson Augusto Ferrari</h3><br>
             <p>Programador Full-Stack </p>
             <p>(19) 9 8779-3121</p>
             <p>andersonaugustoferrari@hotmail.com</p><br>
-            <h4>Sobre mim:</h4>
-            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAtualmente trabalho como desenvolvedor Back-end, utilizando Node.js (Express) com arquitetura MVC.
-                Tenho grande experiência com Front-end, sendo: HTML, CSS e Javascript. Também tenho conhecimento básico em desenvolvimento de SPA com os Frameworks: Angular, React.js e Vue.js. Trabalhei com plataformas de gerenciamento de projetos e sistema de versionamento, sendo: Github, Trello e Asana.
-            </p>
+            <h4>Sobre mim:</h4> 
+            <p id="text">
+              Atualmente trabalho como desenvolvedor Back-end, utilizando Node.js (Express) com arquitetura MVC.
+              Tenho grande experiência com Front-end, sendo: HTML, CSS e Javascript. Também tenho conhecimento básico em desenvolvimento de SPA com os Frameworks: Angular, React.js e Vue.js. Trabalhei com plataformas de gerenciamento de projetos e sistema de versionamento, sendo: Github, Trello e Asana.  
+            </p> 
         </div>
     </div>
     <div class="social">
@@ -91,7 +98,6 @@
           </div>
         </a>
       </div>
-    </div>
 </section>
 
 <section class="main-box anime-opacity-left">
@@ -125,7 +131,8 @@
     <div class="title-n2 container-top">
         <h1 class="colorWhite titleNv1">Projetos</h1>
     </div>
-      <div class="skills-n2 projects">
+      <div class="projects">
+        <div class="owl-carousel">
           <a href="./botoes/">  
             <div class="btn-projects card-fundo">
               <img src="./imagens/buttonsImage.png" width="180px" alt="Buttons"/>
@@ -174,6 +181,7 @@
               <div class="title-card card-titulo">Em breve</div>
             </div>
           </a>
+        </div>
      </div>
 </section>
 
@@ -196,6 +204,36 @@
 </section>
  
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="animation.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  $('.owl-carousel').owlCarousel({
+    autoplay: true,
+    rewind: true, /* use rewind if you don't want loop */
+    responsiveClass: true,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      700: {
+        items: 2
+      },
+      1024: {
+        items: 3
+      },
+      1366: {
+        items: 4
+      },
+      1666: {
+        items: 5
+      }
+    }
+  })
+</script>
 </html>
