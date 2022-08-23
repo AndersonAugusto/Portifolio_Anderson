@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagens/ander_ico.ico">
+    <link rel="stylesheet" href="../assets/forca.css">
+    <link rel="stylesheet" href="../assets/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <title>Jogo da forca</title>
+</head>
+<body id="box">
+    <section class="box-boneco">
+        <div class="cabeca absolute"></div>
+        <div class="tronco absolute"></div>
+        <div class="braco-esquerdo absolute"></div>
+        <div class="braco-direito absolute"></div>
+        <div class="pe-esquerdo absolute"></div>
+        <div class="pe-direito absolute"></div>
+    </section>
+
+    <p class="dica"> Dica: (dica aqui)</p>
+
+    <div id="secret-word"> 
+        <span id="bars" class="bars"></span>
+    </div>
+
+    <input class="input"/>
+    <div class="simple-keyboard"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <script src="./forca.js"></script>
+</body>
+</html>
