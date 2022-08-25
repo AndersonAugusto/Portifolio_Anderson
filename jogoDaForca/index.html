@@ -12,24 +12,25 @@
 </head>
 <body id="box">
     <section class="box-boneco">
-        <div class="cabeca absolute"></div>
-        <div class="tronco absolute"></div>
-        <div class="braco-esquerdo absolute"></div>
-        <div class="braco-direito absolute"></div>
-        <div class="pe-esquerdo absolute"></div>
-        <div class="pe-direito absolute"></div>
+        <div id="cabeca" class="cabeca absolute"></div>
+        <div id="tronco" class="tronco absolute"></div>
+        <div id="braco-esquerdo" class="braco-esquerdo absolute"></div>
+        <div id="braco-direito" class="braco-direito absolute"></div>
+        <div id="pe-esquerdo" class="pe-esquerdo absolute"></div>
+        <div id="pe-direito"class="pe-direito absolute"></div>
     </section>
 
-    <p class="dica"> Dica: (dica aqui)</p>
+    <p id="dica" class="dica"> </p>
 
     <div id="secret-word"> 
-        <span id="bars" class="bars"></span>
+        <span id="bars" class="bars"> </span>
     </div>
 
-    <input class="input"/>
+    <!-- <input class="input"/> -->
     <div class="simple-keyboard"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./forca.js"></script>
 </body>
 </html>
