@@ -117,7 +117,6 @@ const word = sortWord(0 , dicas.length)
 
 const dica = word.tema
 const secretWord = word.word
-
 let palavra = []
 let escolha = []
 
@@ -137,7 +136,7 @@ function renderBars(){
 }
 
 
-const myKeyboard = new Keyboard({onKeyPress: button => onKeyPress({button: button , palavra: palavra , escolha: escolha})});
+const myKeyboard = new Keyboard({onKeyPress: button => onKeyPress({button: button , palavra: palavra , escolha: escolha , secretWord: secretWord})});
 
 let number = 0
 let bitGanhou = 0
@@ -180,7 +179,7 @@ function onKeyPress(button) {
         number += 1
         verifyTurn(number)
         
-        if(number <= 4){
+        if(number <= 5){
             swal({
                 title: "Você errou a letra, tente novamente",
                 timer: 1000,
@@ -188,10 +187,10 @@ function onKeyPress(button) {
             });
         } else {
             swal({
-                title: `A palavra era: ${palavra.join("")} `,
+                title: `A palavra era: ${secretWord.toUpperCase()} `,
                 timer: 3000,
                 button: false
-            });
+            }).then(() =>  window.location.reload())
         }
     }
 }
