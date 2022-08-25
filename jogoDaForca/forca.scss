@@ -1,0 +1,110 @@
+#box {
+    background-color:rgb(21, 29, 105);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .box-boneco {
+        margin-top: 10px;
+        position: relative;
+        border: 1px solid #fff;
+        width: 200px;
+        height: 40vh;
+        border-radius: 20px;
+        background-color: #0000004a;
+    }
+    
+    .absolute {position: absolute;}
+
+    .cabeca {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        height: 92px;
+        width: 100px;
+        left: 50%;
+        margin-top: 10px;
+        transform: translateX(-50%);
+        display: none;
+    }
+
+    .tronco {
+        height: 100px;
+        width: 2px;
+        border: 1px solid #fff;
+        left: 50.2%;
+        top: 34%;
+        transform: translateX(-50%);
+        display: none;
+    }
+
+    .braco-esquerdo {
+        height: 50px;
+        border: 1px solid #fff;
+        left: 40%;
+        transform: rotate(45deg);
+        top: 34%;
+        display: none;
+    }
+    .braco-direito {
+        height: 50px;
+        border: 1px solid #fff;
+        left: 59%;
+        transform: rotate(-45deg);
+        top: 34%;
+        display: none;
+    }
+    .pe-esquerdo {
+        height: 50px;
+        border: 1px solid #fff;
+        left: 59%;
+        transform: rotate(-45deg);
+        top: 64%;
+        display: none;
+    }
+    .pe-direito {
+        height: 50px;
+        border: 1px solid #fff;
+        left: 40%;
+        transform: rotate(45deg);
+        top: 64%;
+        display: none;
+    }
+
+    .dica {
+        color: #fff;
+        margin: 20px 0;
+    }
+    
+    #secret-word {
+        padding: 0px 0 28px 0;
+        width: 50%;
+        color: #fff;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-size: xxx-large;
+        white-space: nowrap;
+    }
+
+    .bars {
+        text-align: center;
+    }
+
+    // .input {
+    //     padding: 10px;
+    //     width:55px;
+    //     height: 50px;
+    //     margin: 20px;
+    //     font-size: 39px;
+    //     text-align: center;
+    // }
+
+    @media (min-width: 900px) {
+        
+        .simple-keyboard {
+            width: 70%;
+        }
+    }
+
+
+}
