@@ -21,6 +21,7 @@
   .main-box {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: auto;
   }
   
@@ -34,16 +35,21 @@
     top: 0px;
   }
   .scroll-n1 {
-    width: 100%;
+    width: 90vw;
     height: auto;
-    margin: 100px;
+    margin: 100px 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
     position: relative;
   }
-  
+  .quadro-img {
+    width: 45vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
   @media (max-width: 768px) {
     .scroll-n1 {
       flex-direction: column;
@@ -62,6 +68,15 @@
     }
     .info-page p {
       text-align: center !important;
+    }
+    .end-of-page {
+      flex-direction: column;
+    }
+    .text-end-page {
+      width: 90vw!important;
+  }
+    .scroll-n4 {
+      width: 90vw!important;
     }
   }
   @media (max-width: 1070px) {
@@ -170,10 +185,10 @@
   /* SCROLL 4 */
   
   .scroll-n4 {
-    width: 90vw;
+    width: 40vw;
     height: auto;
     min-height: 500px;
-    margin: 30px;
+    margin: 30px 20px 30px 0;
     background-color: rgba(0, 0, 0, 0.258);
   }
   .scroll-n4 form {
@@ -202,7 +217,6 @@
     color: #fff;
   }
   .scroll-n4 label {
-    color: #fff;
     padding: 0 0 5px 5px;
   }
   .scroll-n4 p {
@@ -213,8 +227,9 @@
   }
   .scroll-n4 button {
     padding: 10px;
-    background-color: #3bd9f0;
-    border-radius: 10px;
+    background-color: #0d5d69;
+    color: #fff;
+    border-radius: 5px;
     border: none;
   }
   .btnEnviar {
@@ -359,16 +374,39 @@
   .owl-nav button {
     position: absolute;
     transform: translateY(-50%);
-    background: rgba(19, 19, 19, 0.7176470588) !important;
   }
   .owl-nav span {
     font-size: 70px;
     position: relative;
     top: -10px;
+    color: #fff;
   }
   .owl-nav button:focus {
     outline: none;
   }
+
+.text-end-page {
+  color:rgb(158, 158, 158);
+  width: 45vw;
+  height: 500px;
+  padding: 15px;
+}
+.text-end-page h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.text-end-page p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+
 
 
   /* PROGRESS SCROLL */
