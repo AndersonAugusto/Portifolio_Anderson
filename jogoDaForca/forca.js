@@ -72,7 +72,7 @@ const dica = word.tema
 const secretWord = word.word
 let palavra = []
 let escolha = []
-let pontuacao = JSON.parse(localStorage.getItem("pontos")) || []
+let pontuacao = JSON.parse(localStorage.getItem("pontos")) || 0
 
 onload = () => {
     let moldeDica = `Dica: ${dica}`
@@ -174,6 +174,9 @@ function pontos(lettersLength , sum , sub) {
     }
     if(sub !== 0) {
         let pontos = pontuacao - (lettersLength * 5)
+
+        pontos < 0 ? pontos = 0 : pontos = pontos
+
         localStorage.setItem('pontos' , JSON.stringify(pontos))
     }
 
