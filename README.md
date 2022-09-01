@@ -1,2 +1,2 @@
 # Portfolio_vueJs
-New Resume with Vue.JS
+New Resume with React
