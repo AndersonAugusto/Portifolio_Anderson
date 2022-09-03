@@ -88,6 +88,10 @@
   background: -webkit-linear-gradient(left, #057282 70.2%, #000 13.2%);
 }
 
+#figma {
+  background: -webkit-linear-gradient(left, #057282 60.2%, #000 13.2%);
+}
+
 #node {
   background: -webkit-linear-gradient(left, #057282 60.2%, #000 13.2%);
 }
