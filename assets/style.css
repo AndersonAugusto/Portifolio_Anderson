@@ -124,15 +124,6 @@ body {
   text-align: center;
 }
 
-.skill-bar {
-  width: 300px;
-  color: #ffffff;
-  font-style: italic;
-  text-align: center;
-  background: #ff4800;
-  margin: 10px;
-}
-
 .skills-n2 {
   display: flex;
   flex-wrap: wrap;
@@ -330,8 +321,12 @@ body {
   background-color: #f62782;
 }
 
-.color-whatsapp {
+.color-normal {
   background-color: #191919;
+}
+
+.color-whatsapp {
+  background-color: #17611d;
 }
 
 .google-font {

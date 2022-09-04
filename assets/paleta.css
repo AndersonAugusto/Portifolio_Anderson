@@ -33,6 +33,10 @@
 .container {
   background-color: rgba(31, 31, 31, 0.492);
   color: rgb(185, 185, 185);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .container-top {
@@ -40,8 +44,39 @@
 }
 
 .size-of-bar {
-  border-radius: 7px;
-  padding: 5px 0;
+  width: 100%;
+}
+
+.skill-bar {
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  position: absolute;
+  bottom: 3px;
+  width: 90%;
+  left: 7px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.box-skill img {
+  width: 50px;
+  margin: 10px 0 0 50%;
+  transform: translate(-50%);
+}
+
+.box-skill {
+  border: 1px solid rgb(44, 44, 44);
+  background-color: rgba(51, 51, 51, 0.8588235294);
+  border-radius: 10px;
+  width: 150px;
+  height: 100px;
+  position: relative;
+  margin: 5px;
+}
+
+.vazio {
+  opacity: 0;
 }
 
 #html {
@@ -76,14 +111,6 @@
   background: -webkit-linear-gradient(left, #057282 65.2%, #000 13.2%);
 }
 
-#jquery {
-  background: -webkit-linear-gradient(left, #057282 25.2%, #000 13.2%);
-}
-
-#flex {
-  background: -webkit-linear-gradient(left, #057282 75.2%, #000 13.2%);
-}
-
 #sql {
   background: -webkit-linear-gradient(left, #057282 70.2%, #000 13.2%);
 }
@@ -104,4 +131,23 @@
 .card-titulo {
   color: #fff4f4;
   background-color: rgba(0, 0, 0, 0.2784313725);
+}
+
+@media (max-width: 600px) {
+  .container {
+    justify-content: center;
+  }
+  .box-skill {
+    width: 29.4117647059%;
+  }
+}
+@media (max-width: 420px) {
+  .box-skill {
+    width: 43.4782608696%;
+  }
+}
+@media (max-width: 320px) {
+  .box-skill {
+    width: 100%;
+  }
 }/*# sourceMappingURL=paleta.css.map */
