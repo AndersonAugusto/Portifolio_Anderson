@@ -338,7 +338,10 @@
     position: relative;
     margin: 30px auto 0 auto;
   }
-  
+  .owl-carousel .owl-item img {
+    width: 80%!important;
+    margin-top: 25px;
+}
   .projects {
     display: flex;
     flex-wrap: wrap;

@@ -27,13 +27,13 @@
     </script>
     <section class="boxOfList">
         <section class="sectionForm">
-            <h2 class="titleNv0 flexCenter" style="color:rgb(0, 255, 242);">Lista Dinâmica</h2>
+            <h2 class="titleNv0 flexCenter" style="color:rgb(0, 255, 242);">Tarefas</h2>
             <form class="formDinamica flexAlignCenter">
                 <div class="d-flex inputs">
                     <label>Titulo:</label>
-                    <input id="nome" type="text"/>
+                    <input id="nome" type="text" />
                 </div>
-                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <textarea name="description" id="description" placeholder="Descrição..." cols="30" rows="10"></textarea>
                 <button type="button" id="none" onclick="enviarDados()" > <p style="color:black;">Adicionar</p> </button>
             </form>
         </section>
@@ -54,15 +54,19 @@
         <p>Você pode montar uma lista de tarefas.</p>
     </section>
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
-
 
     async function enviarDados() {
         let nome = document.getElementById('nome').value
         let description = document.getElementById('description').value
 
         if(!nome || !description) {
-            return 
+            swal({
+                  title: "Preencha os campos",
+                  icon: "error",
+                  timer: 3000,
+              });
         } else {
             cards.push(
                 {
