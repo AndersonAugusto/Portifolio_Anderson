@@ -38,7 +38,7 @@ body {
 }
 
 .scroll-n1 {
-  width: 90vw;
+  width: 84vw;
   height: auto;
   margin: 100px 0;
   display: flex;
@@ -102,7 +102,7 @@ body {
 
 .info-page p {
   text-align: left;
-  padding: 5px;
+  padding: 5px 0;
   width: 100%;
 }
 
