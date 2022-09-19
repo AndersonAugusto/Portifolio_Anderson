@@ -1,0 +1,14 @@
+.buttonMenu {
+    width: calc(100vw / 3);
+    background-color: #062037!important;
+    border: 1px solid #476868 !important;
+    padding: 15px 0!important;
+    font-weight: bolder!important;
+    &:hover {
+        background-color: #0f6e61!important;
+    }
+}
+a {
+    text-decoration: none!important;
+    color: #e9e9e9;
+}

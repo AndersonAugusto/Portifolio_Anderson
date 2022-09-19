@@ -1,7 +1,59 @@
-body {
-    background: rgb(2,0,36);
-    background: linear-gradient(45deg, rgb(0, 0, 0) 40%, rgb(17, 69, 80) 70%, rgb(0, 0, 0) 100%);
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow-y: hidden;
+
+
+.container header {
+    
+    img {
+        width: 180px;
+        padding: 20px 0 20px 55px;
+    }
+
+}
+
+.first-section {
+    position: relative;
+    display: flex;
+    width: 90vw;
+    margin: 50px auto 0 auto;
+    color: rgb(255, 255, 255);
+    
+  
+
+    button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 30px 100px;
+        background-color: transparent;
+        border: 1px solid #31afb4;
+        color: #31afb4;
+        font-size: 1.2em;
+        transition: all .2s;
+         &:hover {
+            background-color: #31afb4;
+            color: #000;
+            transition: all .2s;
+            cursor: pointer;
+        }
+    }
+
+    :nth-child(2) {
+        margin-left: 50px;
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-left: 0;
+            background-color: rgb(80, 80, 80);
+
+        }
+        h1 {
+            padding: 5px 15px; 
+            background-color: rgb(0, 0, 0);
+            font-weight: revert;
+        }
+    }
+
+    .personPhoto {
+        width: 350px;
+    }
+
 }
