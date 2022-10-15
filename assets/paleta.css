@@ -35,13 +35,6 @@
   color: rgb(185, 185, 185);
 }
 
-.container-skills {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
 .size-of-bar {
   width: 100%;
 }
@@ -69,7 +62,6 @@
   background: rgb(57, 57, 57);
   background: linear-gradient(144deg, rgb(57, 57, 57) 53%, rgb(61, 61, 61) 67%, rgb(121, 124, 131) 98%);
   border-radius: 10px;
-  width: 19%;
   height: 100px;
   position: relative;
   margin: 5px;
@@ -134,30 +126,27 @@
 }
 
 @media (max-width: 600px) {
-  .container-skills {
-    justify-content: center;
-  }
-  .box-skill {
-    width: 45.4545454545%;
+  .skills-n2 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 420px) {
-  .box-skill {
-    width: 43.4782608696%;
+  .skills-n2 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 600px) and (max-width: 1156px) {
-  .box-skill {
-    width: 31.25%;
-  }
-}
-@media (max-width: 320px) {
-  .box-skill {
-    width: 100%;
+  .skills-n2 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1056px) {
-  .box-skill {
-    width: 18.8679245283%;
+  .skills-n2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1756px) {
+  .skills-n2 {
+    grid-template-columns: repeat(5, 1fr);
   }
 }/*# sourceMappingURL=paleta.css.map */

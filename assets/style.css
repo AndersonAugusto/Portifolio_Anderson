@@ -125,10 +125,8 @@ body {
 }
 
 .skills-n2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   padding: 20px;
 }
 
