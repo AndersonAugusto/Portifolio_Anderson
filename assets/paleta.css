@@ -88,7 +88,7 @@
 }
 
 #react {
-  background: -webkit-linear-gradient(left, #057282 25.2%, #000 13.2%);
+  background: -webkit-linear-gradient(left, #057282 35.2%, #000 13.2%);
 }
 
 #angular {
@@ -100,7 +100,7 @@
 }
 
 #eng {
-  background: -webkit-linear-gradient(left, #057282 65.2%, #000 13.2%);
+  background: -webkit-linear-gradient(left, #057282 45.2%, #000 13.2%);
 }
 
 #sql {
@@ -108,11 +108,19 @@
 }
 
 #figma {
-  background: -webkit-linear-gradient(left, #057282 60.2%, #000 13.2%);
+  background: -webkit-linear-gradient(left, #057282 100%, #000 13.2%);
 }
 
 #node {
   background: -webkit-linear-gradient(left, #057282 60.2%, #000 13.2%);
+}
+
+#typescript {
+  background: -webkit-linear-gradient(left, #057282 30.2%, #000 13.2%);
+}
+
+#nest {
+  background: -webkit-linear-gradient(left, #057282 15.2%, #000 13.2%);
 }
 
 .card-fundo {
