@@ -1,92 +1,58 @@
 
+.container-top {
+    background-image: url('./assets/img/modelo-1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
 
-.container header {
-    
-    img {
-        width: 180px;
-        padding: 20px 0 20px 55px;
+    .caixa-foguete {
+        position: absolute;
+        left: 59%;
+        top: 440px;
+        transform: translate(-50%, -50%);
+        .foguete {
+            width: 120px;
+            height: 220px;
+            position: relative;
+            border: 1px solid rgba(255, 0, 0, 0);
+            z-index: 99;
+            animation: animaFoguete 5s alternate ease-in-out;
+            .carcaca {
+                width: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                z-index: 99;
+            }
+            .fogo {
+                width: 100%;
+                transform: rotate(180deg);
+                margin-bottom: 50px;
+                position: absolute;
+                bottom: -145px;
+                animation: animaOpacity 1s alternate ease-in-out 3;
+            }
+        }
     }
-
 }
 
-.first-section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
+@keyframes animaOpacity {
+    0%{opacity: 1;}
+    40%{opacity: 0;}
+    50%{opacity: 1;}
+    70%{opacity: 0;}
+    90%{opacity: 1;}
+    100%{ opacity: 0;}
+}
+
+@keyframes animaFoguete {
+    0%{top: -800px}
+    100%{ top: 0}
+}
+
+
+.container {
     height: 500px;
-    margin: 50px auto 0 auto;
-    color: rgb(255, 255, 255);
-    text-align: center;
-
-    & h1 {
-        margin: 10px 0 10px 0;
-    }
-    & p {
-        margin: 0 0 30px 0;
-    }
-
-    .social-icons {
-        display: flex;
-        margin-top: 10px;
-        justify-content: space-around;
-        & img {
-            width: 32px;
-        }
-    }
-
-    .container-card {
-        border: 1px solid #4a4a4a;
-        border-radius: 20px;
-        background-color: rgba(48, 48, 48, 0.856);
-        width: 300px;
-        height: 500px;
-        padding: 10px;
-        transition: all .1s;
-
-        @keyframes showInfo {
-            from {transform: scale(1);}
-            to {transform:  scale(1.03);}
-        }
-
-        &:hover {
-            position: absolute;
-            z-index: 888;
-            background-color: rgb(29, 29, 29);
-            color: lime;
-            font-weight: 900;
-            line-height: 1.6;
-            transform:  scale(1.03);
-            animation: showInfo 0.5s alternate ease-in-out;
-            transition: all .1s;
-            & .info-card {
-                display: none;
-            }
-            & .text-card {
-                display: block;
-            }
-        }
-    }
-   
-    .text-card {
-        display: none;
-    }
-    .personPhoto {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-}
-
-
-.secont-section {
-    color: #fff;
-    height: auto;
-    background-color: rgb(43, 43, 43);
-    margin: 50px 0 0 0;
-    p {
-        margin: 0;
-    }
+    background-color: #421f95;
 }

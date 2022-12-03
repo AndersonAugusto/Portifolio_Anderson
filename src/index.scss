@@ -9,18 +9,13 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://cdn.wallpapersafari.com/39/85/TNHIlB.jpg');
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  background-color: rgb(0, 0, 0);
-}
-::-webkit-scrollbar-thumb {
-  background-color: rgb(34, 102, 148);
-}
+// ::-webkit-scrollbar {
+//   width: 5px;
+//   background-color: rgb(0, 0, 0);
+// }
+// ::-webkit-scrollbar-thumb {
+//   background-color: rgb(34, 102, 148);
+// }
 
