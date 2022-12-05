@@ -5,100 +5,123 @@ import './App.scss';
 import foguete from './assets/img/foguete.png'
 import fogo from './assets/img/fogo.png'
 import astronauta from './assets/img/astronauta.png'
+import MyPhoto from './assets/img/ander.png'
 
 const Skills = [
   {
     name: 'HTML',
-    percent: '100%',
+    percent: 100,
     type: 'Front-end',
     image: require('./assets/img/html.png')
   },
   {
     name: 'SCSS',
-    percent: '80%',
+    percent: 80,
     type: 'Front-end',
     image: require('./assets/img/sass.png')
   },
   {
     name: 'Javascript',
-    percent: '90%',
+    percent: 90,
     type: 'Front-end',
     image: require('./assets/img/js.png')
   },
   {
     name: 'Typescript',
-    percent: '15%',
+    percent: 15,
     type: 'Front-end',
     image: require('./assets/img/typescript.png')
   },
   {
     name: 'NodeJs',
-    percent: '60%',
+    percent: 60,
     type: 'Back-end',
     image: require('./assets/img/node.png')
   },
   {
     name: 'SQL server',
-    percent: '70%',
+    percent: 70,
     type: 'Others',
     image: require('./assets/img/sql-server.png')
   },
   {
     name: 'Github',
-    percent: '70%',
+    percent: 70,
     type: 'Others',
     image: require('./assets/img/githubSkill.png')
   },
   {
     name: 'Figma',
-    percent: '100%',
+    percent: 100,
     type: 'Others',
     image: require('./assets/img/figma.png')
   },
   {
     name: 'Bootstrap',
-    percent: '75%',
+    percent: 75,
     type: 'Front-end',
     image: require('./assets/img/bootstrap.png')
   },
   {
     name: 'React',
-    percent: '50%',
+    percent: 50,
     type: 'Front-end',
     image: require('./assets/img/atom.png')
   },
   {
     name: 'MongoDB',
-    percent: '10%',
+    percent: 10,
     type: 'Others',
     image: require('./assets/img/mongodb.png')
   },
   {
     name: 'Express',
-    percent: '40%',
+    percent: 40,
     type: 'Back-end',
     image: require('./assets/img/express33.png')
   },
   {
     name: 'NestJS',
-    percent: '10%',
+    percent: 10,
     type: 'Back-end',
     image: require('./assets/img/nest.png')
   },
   {
     name: 'Angular',
-    percent: '20%',
+    percent: 20,
     type: 'Front-end',
     image: require('./assets/img/AngularJS.png')
   },
   {
     name: 'English',
-    percent: '50%',
+    percent: 50,
     type: 'Others',
     image: require('./assets/img/english.png')
   }
 ]
 
+const Projects = [
+  {
+    image: require('./assets/img/forca.png'),
+    title: 'Jogos da forca'
+  },
+  {
+    image: require('./assets/img/jogo-da-velha.png'),
+    title: 'Jogos da velha'
+  },
+  {
+    image: require('./assets/img/predio-comercial.png'),
+    title: 'Prédio'
+  },
+  {
+    image: require('./assets/img/logoMercadao.png'),
+    title: 'Mercado'
+  },
+  {
+    image: require('./assets/img/buttonsImage.png'),
+    title: 'Botões'
+  }
+]
 
 function App() {
 
@@ -109,7 +132,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFinishedTimeout(false);
-    }, 5000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -121,11 +144,22 @@ function App() {
           <p>{skill.name}</p>
           <div
             className='progressBar'
-            style={{ background: `linear-gradient(90deg, rgba(90, 255, 77, 1) ${skill.percent}, rgba(60, 60, 60, 1) 0%)` }}
+            style={{ background: `linear-gradient(90deg, rgba(90, 255, 77, 1) ${skill.percent}%, rgba(60, 60, 60, 1) 0%)` }}
           > </div>
         </div>
       </div>
     ))
+  }
+
+  const RenderProjects = () => {
+    return (
+      Projects.map(project => (
+        <div className='box-project'>
+          <img src={project.image} />
+          <p>{project.title}</p>
+        </div>
+      ))
+    )
   }
 
   const handleActive = e => {
@@ -174,7 +208,7 @@ function App() {
           }
         </div>
       </section>
-      <div>
+      <div className='title'>
         <h3>Skills</h3>
       </div>
       <section className='container skills-box'>
@@ -213,8 +247,26 @@ function App() {
           </div>
         </div>
       </section>
-      <section className='container'>
-
+      <div className='title'>
+        <h3>Projects</h3>
+      </div>
+      <section className='container projects-box '>
+        <div className='project-box'>
+          <RenderProjects />
+        </div>
+      </section>
+      <div className='title'>
+        <h3>About Me</h3>
+      </div>
+      <section className='container box-aboutMe '>
+        <div className='aboutMe-box'>
+          <div className='aboutMe-photo'>
+            <img src={MyPhoto} />
+          </div>
+          <div>
+            <p>Este é meu perfilzinho</p>
+          </div>
+        </div>
       </section>
     </>
   );

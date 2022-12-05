@@ -1,4 +1,29 @@
 
+.background {
+    width: 90vw;
+    margin: 0 auto 50px auto;
+    background-color: #2e2e2e;
+}
+
+.title {
+    width: 90vw;
+    margin: 0 auto 0 auto;
+    border: none;
+    padding: 1px;
+    margin-top: 50px;
+    color: #fff;
+    h3 {
+        padding: 10px;
+        border: none;
+        width: max-content;
+        margin-bottom: -1px;
+        border-radius: 1px;
+        background-color: #2e2e2e;
+        box-shadow: 0px 0px 7px 0px black;
+        letter-spacing: 2px;
+    }
+}
+
 .container-top {
     background-image: url('./assets/img/modelo-1.jpg');
     background-position: bottom center;
@@ -31,10 +56,11 @@
     }
     .box-astronauta {
         position: relative;
+
         .text-astronauta {
             position: absolute;
             right: 200px;
-            top: 330px;
+            top: 230px;
             color: #000;
             border-radius: 2px;
             font-weight: bolder;
@@ -61,7 +87,7 @@
             width: 200px;
             position: absolute;
             right: 0;
-            top: 350px;
+            top: 250px;
             animation: animaRightToLeft 2s alternate ease-in-out;
         }
     }
@@ -77,7 +103,7 @@
             position: relative;
             border: 1px solid rgba(255, 0, 0, 0);
             z-index: 99;
-            animation: animaFoguete 5s alternate ease-in-out;
+            animation: animaFoguete 10s alternate ease-in-out;
             .carcaca {
                 width: 100%;
                 object-fit: cover;
@@ -91,7 +117,7 @@
                 margin-bottom: 50px;
                 position: absolute;
                 bottom: -145px;
-                animation: animaOpacity 1s alternate ease-in-out 3;
+                animation: animaOpacity 10s alternate ease-in-out;
             }
         }
     }
@@ -100,18 +126,16 @@
 
 .container {
     background-color: #421f95;
-    margin-top: 50px;
 }
 .name-skills {
     display: flex;
     color: #fff;
     width: 90vw;
     height: 500px;
-    border: 1px solid #fff;
-
     margin: 0 auto;
     background-color: #2e2e2e;
     .box-buttons {
+        box-shadow: 0px 0px 7px 0px black;
         margin: 0;
         width: 150px;
         height: 100%;
@@ -165,6 +189,7 @@
             padding: 10px 20px;
             background-color: #000000;
             height: max-content;
+            animation: showSkill .5s alternate ease-in-out;
             img {
                 width: 50px;
             }
@@ -186,16 +211,81 @@
     }
 }
 
+.projects-box {
+    width: 90vw;
+    margin: 0 auto 50px auto;
+    background-color: #2e2e2e;
+    .project-box {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        box-shadow: 0px 0px 7px 0px black;
+        .box-project {
+            border: 1px solid #000;
+            padding: 20px;
+            background-color: #343434;
+            box-shadow: 0px 0px 7px 0px black;
+            transition: all .2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            &:hover {
+                cursor: pointer;
+                background-color: #344da9;
+                transition: all .2s;
+            }
+            img {
+                width: 100%;
+            }
+            p {
+                color: #fff;
+                text-align: center;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+.box-aboutMe {
+    width: 90vw;
+    margin: 0 auto;
+    background-color: #2e2e2e;
+    box-shadow: 0px 0px 7px 0px black;
+    .aboutMe-photo {
+        padding: 20px;
+        width: 45vw;
+        img {
+            width: 70%;
+        }
+    }
+}
 
 
 @keyframes animaOpacity {
     0%{opacity: 1;}
-    40%{opacity: 0;}
     50%{opacity: 1;}
-    70%{opacity: 0;}
-    90%{opacity: 1;}
+    51%{opacity: 0;}
+    85%{opacity: 1;}
+    86%{opacity: 0;}
+    95%{ opacity: 1;}
+    96%{ opacity: 0;}
     100%{ opacity: 0;}
 }
+
+@keyframes animaFoguete {
+    0%{ transform: rotate(90deg) scale(0.5); right: 900px; top: -300px;}
+    50%{transform: rotate(90deg) scale(0.5); right: -1045px; top: -300px;}
+    60%{transform: rotate(10deg) scale(1); top: -1400px;}
+    80%{transform: rotate(10deg) scale(1); top: -600px;}
+    85%{transform: rotate(-10deg);}
+    90%{transform: rotate(10deg);}
+    95%{transform: rotate(5deg);}
+    100%{transform: rotate(0deg); top: 0;}
+}
+
 @keyframes animaOpacityText {
     0%{opacity: 0;}
     80%{opacity: 0;}
@@ -206,9 +296,17 @@
     100%{right: 0;}
 }
 
-@keyframes animaFoguete {
-    0%{top: -800px}
-    100%{ top: 0}
+
+
+@keyframes showSkill {
+    0% {
+        opacity: 0;
+        transform: translate(-40px, 0);
+      }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
 
 
@@ -219,11 +317,21 @@
             grid-template-columns: repeat(3, 1fr);
         }
     }
+    .projects-box {
+        .project-box {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 }
 @media (max-width: 950px) {
     .name-skills {
         .container-skills {
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .projects-box {
+        .project-box {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
@@ -234,6 +342,11 @@
         }
         .container-skills {
             grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .projects-box {
+        .project-box {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
@@ -249,6 +362,11 @@
             }
         }
     }
+    // .projects-box {
+    //     .project-box {
+    //         grid-template-columns: repeat(1, 1fr);
+    //     }
+    // }
 }
 @media (min-width: 1350px) {
     .container-top {
@@ -256,11 +374,21 @@
             top: 450px;
         }
     }
+    .projects-box {
+        .project-box {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
 }
 @media (min-width: 1650px) {
     .container-top {
         .caixa-foguete {
             top: 400px;
+        }
+    }
+    .projects-box {
+        .project-box {
+            grid-template-columns: repeat(6, 1fr);
         }
     }
 }
