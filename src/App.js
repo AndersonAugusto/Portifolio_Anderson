@@ -6,6 +6,8 @@ import foguete from './assets/img/foguete.png'
 import fogo from './assets/img/fogo.png'
 import astronauta from './assets/img/astronauta.png'
 import MyPhoto from './assets/img/ander.png'
+import alienigena from './assets/img/alienigena.webp'
+
 
 const Skills = [
   {
@@ -263,10 +265,26 @@ function App() {
           <div className='aboutMe-photo'>
             <img src={MyPhoto} />
           </div>
-          <div>
-            <p>Este é meu perfilzinho</p>
+          <div className='description'>
+            <h3>
+              Anderson Augusto Ferrari
+            </h3>
+            <p>
+
+              Sou desenvolverdor Full stack Jr. Possuo sólidos conhecimentos
+
+              Sou desenvolvedor Full Stack, possuo sólidos conhecimentos sobre Node.js (Express) com arquitetura MVC. Tenho grande experiência com Front-end, sendo: HTML, CSS , Javascript , bootstrap e jquery. Também tenho conhecimento em desenvolvimento de SPA com os Frameworks: Angular e React.js. Obtive experiência com plataformas de gerenciamento de projetos e sistema de versionamento, sendo: Github, Trello e Asana.
+            </p>
+            <div className="alienigena">
+              <img src={alienigena} />
+              <div className='feixe'></div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section className='container'>
+        ds
       </section>
     </>
   );

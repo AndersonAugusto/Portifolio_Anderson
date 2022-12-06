@@ -30,6 +30,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
+    box-shadow: 0px 0px 66px 31px #46199f;
 
     .navbar {
         position: absolute;
@@ -125,7 +126,7 @@
 
 
 .container {
-    background-color: #421f95;
+    // background-color: #421f95;
 }
 .name-skills {
     display: flex;
@@ -253,16 +254,43 @@
     width: 90vw;
     margin: 0 auto;
     background-color: #2e2e2e;
+    color: #fff;
     box-shadow: 0px 0px 7px 0px black;
-    .aboutMe-photo {
-        padding: 20px;
-        width: 45vw;
+    position: relative;
+    .aboutMe-box {
+        display: flex;
+        .aboutMe-photo {
+            padding: 20px;
+            width: 25vw;
+            img {
+                width: 100%;
+                animation:  delayImagePerfil 3s alternate ease-in-out;
+            }
+        }
+        .description {
+            width: 75vw;
+            font-size: 18px;
+            line-height: 29px;
+            color: #afafaf;
+            font-weight: 600;
+        }
+    }
+    .alienigena {
         img {
-            width: 70%;
+            animation: naveEspacialAnima 30s linear infinite;
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            width: 50px;
         }
     }
 }
 
+@keyframes naveEspacialAnima {
+    0%{right: 10px;}
+    50%{right:  400px;}
+    100%{right:  10px;}
+}
 
 @keyframes animaOpacity {
     0%{opacity: 1;}
