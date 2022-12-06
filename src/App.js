@@ -270,7 +270,6 @@ function App() {
               Anderson Augusto Ferrari
             </h3>
             <p>
-
               Sou desenvolverdor Full stack Jr. Possuo sólidos conhecimentos
 
               Sou desenvolvedor Full Stack, possuo sólidos conhecimentos sobre Node.js (Express) com arquitetura MVC. Tenho grande experiência com Front-end, sendo: HTML, CSS , Javascript , bootstrap e jquery. Também tenho conhecimento em desenvolvimento de SPA com os Frameworks: Angular e React.js. Obtive experiência com plataformas de gerenciamento de projetos e sistema de versionamento, sendo: Github, Trello e Asana.
@@ -282,9 +281,17 @@ function App() {
           </div>
         </div>
       </section>
-
-      <section className='container'>
-        ds
+      <div className='title'>
+        <h3>Contact me</h3>
+      </div>
+      <section className='container box-contact-me'>
+        2
+      </section>
+      <div className='title'>
+        <h3>Footer</h3>
+      </div>
+      <section className='container '>
+        2
       </section>
     </>
   );
