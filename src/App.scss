@@ -12,6 +12,8 @@
     padding: 1px;
     margin-top: 50px;
     color: #fff;
+    position: relative;
+
     h3 {
         padding: 10px;
         border: none;
@@ -238,7 +240,7 @@
             justify-content: space-between;
             &:hover {
                 cursor: pointer;
-                background-color: #344da9;
+                background-color: #1d5a5e;
                 transition: all .2s;
             }
             img {
@@ -255,11 +257,6 @@
 
 
 .box-aboutMe {
-    // width: 90vw;
-    // margin: 0 auto;
-    // background-color: #2e2e2e;
-    // color: #fff;
-    // box-shadow: 0px 0px 7px 0px black;
     position: relative;
     .aboutMe-box {
         display: flex;
@@ -277,6 +274,9 @@
             line-height: 29px;
             color: #afafaf;
             font-weight: 600;
+            h3 {
+                margin-bottom: 30px;
+            }
         }
     }
     .alienigena {
@@ -288,14 +288,102 @@
             width: 50px;
         }
     }
+    @media (max-width:600px) {
+        .aboutMe-box {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+    }
 }
 
 
 .box-contact-me {
+    display: flex;
     height: 300px;
+    .socialMedia {
+        padding: 20px;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .box-socialMedia {
+            display: flex;
+            margin: 15px auto 10px auto;
+            width: 212px;
+            padding: 9px 20px;
+            align-items: center;
+            background-color:  #343434;
+            box-shadow: 0px 0px 5px 1px black;
+            &:hover {
+                background-color: #2a8086;
+                cursor: pointer;
+            }
+        }
+        span {
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+    }
+
+    form {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            background-color: #286867;
+            color: #fff;
+            float: right;
+            box-shadow: 0px 0px 8px 0px black;
+            margin-top: 15px;
+            font-weight: 600;
+            &:hover {
+                background-color: #2e8a88;
+                cursor: pointer;
+            }
+        }
+        textarea {
+         padding-left: 10px;
+         height: 100px;
+         resize: none;
+         background-color: #4e4e4e;
+         color: #fff;
+        }
+        input {
+         height: 40px;
+         padding-left: 10px;
+         background-color: #4e4e4e;
+         color: #fff;
+         &:nth-child(n - 2){
+            margin-bottom: 10px;
+        }
+         
+        }
+    }
 }
 
-
+.copy-right {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 15px 0;
+    p {
+        margin: 0;
+    }
+}
 
 
 
