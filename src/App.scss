@@ -46,20 +46,21 @@
         li {
             margin-right: 50px;
             border: 1px solid #5a5a5a;
-            padding: 5px 20px;
-            background-color: #001f4e;
+            padding: 10px 20px;
+            background-color: #2e8a8800;
             border-radius: 2px;
             transition: all .2s;
-            &:hover {
-                background-color: #344da9;
-                transition: all .2s;
+            &:hover,
+            &:focus {
                 cursor: pointer;
+                box-shadow: 0px 2px 4px -5px #ffffff;
+                transform: translateY(-2px);
+                background-color: #338f8d;
             }
         }
     }
     .box-astronauta {
         position: relative;
-
         .text-astronauta {
             position: absolute;
             right: 200px;
@@ -73,7 +74,6 @@
             animation: animaOpacityText 2s alternate ease-in-out;
             &::after {
                 content: '';
-                /* border: 1px solid; */
                 position: absolute;
                 right: -5px;
                 bottom: -1px;
@@ -407,13 +407,15 @@
 }
 
 @keyframes animaFoguete {
-    0%{ transform: rotate(90deg) scale(0.5); right: 900px; top: -300px;}
-    50%{transform: rotate(90deg) scale(0.5); right: -1045px; top: -300px;}
-    60%{transform: rotate(10deg) scale(1); top: -1400px;}
-    80%{transform: rotate(10deg) scale(1); top: -600px;}
-    85%{transform: rotate(-10deg);}
-    90%{transform: rotate(10deg);}
-    95%{transform: rotate(5deg);}
+    0%{transform: rotate(90deg) scale(0.5); right: 70vw; top: -200px;}
+    50%{transform: rotate(90deg) scale(0.5); right: -110vw; top: -200px;}
+    51%{transform: rotate(10deg) scale(1); top: -100vh;}
+    61%{transform: rotate(-10deg) scale(1); top: -100vh;}
+    80%{transform: rotate(10deg) scale(1);}
+    90%{transform: rotate(-10deg);}
+    92%{transform: rotate(5deg);}
+    95%{transform: rotate(-5deg);}
+    96%{transform: rotate(0deg);}
     100%{transform: rotate(0deg); top: 0;}
 }
 

@@ -63,7 +63,7 @@ const Skills = [
   },
   {
     name: "Bootstrap",
-    percent: 75,
+    percent: 100,
     type: "Front-end",
     image: require("./assets/img/bootstrap.png"),
   },
@@ -86,13 +86,13 @@ const Skills = [
     image: require("./assets/img/express33.png"),
   },
   {
-    name: "NestJS",
+    name: "NestJs",
     percent: 10,
     type: "Back-end",
     image: require("./assets/img/nest.png"),
   },
   {
-    name: "Angular",
+    name: "Angular 2",
     percent: 20,
     type: "Front-end",
     image: require("./assets/img/AngularJS.png"),
@@ -108,23 +108,23 @@ const Skills = [
 const Projects = [
   {
     image: require("./assets/img/forca.png"),
-    title: "Jogos da forca",
+    title: "Hangman Game",
   },
   {
     image: require("./assets/img/jogo-da-velha.png"),
-    title: "Jogos da velha",
+    title: "Hash Game",
   },
   {
     image: require("./assets/img/predio-comercial.png"),
-    title: "Prédio",
+    title: "Building",
   },
   {
     image: require("./assets/img/logoMercadao.png"),
-    title: "Mercado",
+    title: "Marketplace",
   },
   {
     image: require("./assets/img/buttonsImage.png"),
-    title: "Botões",
+    title: "Buttons",
   },
 ];
 
@@ -292,11 +292,11 @@ function App() {
       </div>
       <section className="container box-contact-me">
         <form>
-          <input placeholder="Nome" />
-          <input placeholder="E-mail" className="amongInput" />
-          <textarea placeholder="Digite sua mensagem..." />
+          <input placeholder="Name" />
+          <input placeholder="Email" className="amongInput" />
+          <textarea placeholder="Type your message..." />
           <div>
-            <button>ENVIAR</button>
+            <button>SEND</button>
           </div>
         </form>
         <div className="socialMedia">
