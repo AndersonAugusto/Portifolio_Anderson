@@ -4,7 +4,10 @@
     margin: 0 auto 50px auto;
     background-color: #2e2e2e;
 }
-
+a {
+    color: #fff;
+    text-decoration: none;
+}
 .title {
     width: 90vw;
     margin: 0 auto 0 auto;
@@ -21,7 +24,6 @@
         margin-bottom: -1px;
         border-radius: 1px;
         background-color: #2e2e2e;
-        box-shadow: 0px 0px 7px 0px black;
         letter-spacing: 2px;
     }
 }
@@ -38,6 +40,11 @@
         position: absolute;
         color: #fff;
         width: 100%;
+        background-color: #44444442;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
         ul {
             display: flex;
             justify-content: right;
@@ -45,9 +52,10 @@
         }
         li {
             margin-right: 50px;
-            border: 1px solid #5a5a5a;
+            color: #00e7ff;
+            border: 1px solid #2e8a8833;
             padding: 10px 20px;
-            background-color: #2e8a8800;
+            background-color: #2e8a8833;
             border-radius: 2px;
             transition: all .2s;
             &:hover,
@@ -132,17 +140,12 @@
     margin: 0 auto;
     background-color: #2e2e2e;
     color: #fff;
-    box-shadow: 0px 0px 7px 0px black;
+    box-shadow: 0px 3px 3px 0px #242424;
 }
 .name-skills {
     display: flex;
-    // color: #fff;
-    // width: 90vw;
     height: 500px;
-    // margin: 0 auto;
-    // background-color: #2e2e2e;
     .box-buttons {
-        box-shadow: 0px 0px 7px 0px black;
         margin: 0;
         width: 150px;
         height: 100%;
@@ -219,20 +222,15 @@
 }
 
 .projects-box {
-    // width: 90vw;
-    // margin: 0 auto 50px auto;
-    // background-color: #2e2e2e;
     .project-box {
         padding: 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
-        box-shadow: 0px 0px 7px 0px black;
         .box-project {
             border: 1px solid #000;
             padding: 20px;
             background-color: #343434;
-            box-shadow: 0px 0px 7px 0px black;
             transition: all .2s;
             display: flex;
             flex-direction: column;
@@ -308,6 +306,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+      
         .box-socialMedia {
             display: flex;
             margin: 15px auto 10px auto;
@@ -316,7 +315,9 @@
             align-items: center;
             background-color:  #343434;
             box-shadow: 0px 0px 5px 1px black;
+            transition: all .2s;
             &:hover {
+                transition: all .2s;
                 background-color: #2a8086;
                 cursor: pointer;
             }
@@ -348,7 +349,9 @@
             box-shadow: 0px 0px 8px 0px black;
             margin-top: 15px;
             font-weight: 600;
+            transition: all 0.2s;
             &:hover {
+                transition: all 0.2s;
                 background-color: #2e8a88;
                 cursor: pointer;
             }
@@ -373,11 +376,32 @@
     }
 }
 
+.topPage {
+    z-index: 99999;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000000a1;
+    color: #686868;
+    box-shadow: 0px 0px 4px 1px #2e2e2e;
+    font-size: xx-large;
+    font-family: cursive;
+    animation: animaOpacityText 1s alternate ease-in-out;
+    &:hover{
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
 .copy-right {
     width: 100%;
     text-align: center;
     margin-top: 100px;
     background-color: #2e2e2e;
+    box-shadow: 0px 0px 6px 0px #080808;
     color: #fff;
     padding: 15px 0;
     p {
@@ -407,15 +431,15 @@
 }
 
 @keyframes animaFoguete {
-    0%{transform: rotate(90deg) scale(0.5); right: 70vw; top: -200px;}
-    50%{transform: rotate(90deg) scale(0.5); right: -110vw; top: -200px;}
-    51%{transform: rotate(10deg) scale(1); top: -100vh;}
+    0%{transform: rotate(90deg) scale(0.4); right: 70vw; top: -200px;}
+    45%{transform: rotate(90deg) scale(0.4); right: -110vw; top: -200px;}
+    60%{transform: rotate(10deg) scale(1); top: -100vh;}
     61%{transform: rotate(-10deg) scale(1); top: -100vh;}
-    80%{transform: rotate(10deg) scale(1);}
+    62%{transform: rotate(10deg) scale(1);}
     90%{transform: rotate(-10deg);}
     92%{transform: rotate(5deg);}
     95%{transform: rotate(-5deg);}
-    96%{transform: rotate(0deg);}
+    96%{transform: rotate(2deg);}
     100%{transform: rotate(0deg); top: 0;}
 }
 

@@ -132,6 +132,24 @@ function App() {
   const [active, setActive] = useState("All");
   const [finishedTimeout, setFinishedTimeout] = useState(true);
   const [skills, setSkills] = useState(Skills);
+  const [topPage, setTopPage] = useState(false);
+  const [year, setYear] = useState([]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        setTopPage(true);
+      } else {
+        setTopPage(false);
+      }
+    });
+  }, [topPage]);
+
+  useEffect(() => {
+    const currentDate = new Date();
+    const Year = currentDate.getUTCFullYear();
+    setYear(Year);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -160,8 +178,8 @@ function App() {
   };
 
   const RenderProjects = () => {
-    return Projects.map((project) => (
-      <div className="box-project">
+    return Projects.map((project, index) => (
+      <div key={index} className="box-project">
         <img src={project.image} />
         <p>{project.title}</p>
       </div>
@@ -183,13 +201,26 @@ function App() {
 
   return (
     <>
-      <section className="container-top">
+      {topPage && (
+        <a href="#goTop">
+          <button className="topPage">^</button>
+        </a>
+      )}
+      <section id="goTop" className="container-top">
         <nav className="navbar">
           <ul>
-            <li>My Skills</li>
-            <li>Project</li>
-            <li>About Me</li>
-            <li>Contact</li>
+            <a href="#skills">
+              <li>My skills</li>
+            </a>
+            <a href="#projects">
+              <li>Projects</li>
+            </a>
+            <a href="#AboutMe">
+              <li>About Me</li>
+            </a>
+            <a href="#Contact">
+              <li>Contact</li>
+            </a>
           </ul>
         </nav>
         <div className="caixa-foguete">
@@ -207,7 +238,7 @@ function App() {
           )}
         </div>
       </section>
-      <div className="title">
+      <div id="skills" className="title">
         <h3>Skills</h3>
       </div>
       <section className="container skills-box">
@@ -253,7 +284,7 @@ function App() {
         </div>
       </section>
       <div className="title">
-        <h3>Projects</h3>
+        <h3 id="projects">Projects</h3>
       </div>
       <section className="container projects-box ">
         <div className="project-box">
@@ -261,7 +292,7 @@ function App() {
         </div>
       </section>
       <div className="title">
-        <h3>About Me</h3>
+        <h3 id="AboutMe">About Me</h3>
       </div>
       <section className="container box-aboutMe ">
         <div className="aboutMe-box">
@@ -288,7 +319,7 @@ function App() {
         </div>
       </section>
       <div className="title">
-        <h3>Contact me</h3>
+        <h3 id="Contact">Contact me</h3>
       </div>
       <section className="container box-contact-me">
         <form>
@@ -300,22 +331,31 @@ function App() {
           </div>
         </form>
         <div className="socialMedia">
-          <div className="box-socialMedia">
-            <img src={github} />
-            <span> Github </span>
-          </div>
-          <div className="box-socialMedia">
-            <img src={whatsapp} />
-            <span> Whatsapp </span>
-          </div>
-          <div className="box-socialMedia">
-            <img src={linkedin} />
-            <span> LinkedIn </span>
-          </div>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/anderson-augusto-ferrari-231577100/"
+          >
+            <div className="box-socialMedia">
+              <img src={linkedin} />
+              <span> LinkedIn </span>
+            </div>
+          </a>
+          <a target="_blank" href="https://github.com/AndersonAugusto">
+            <div className="box-socialMedia">
+              <img src={github} />
+              <span> Github </span>
+            </div>
+          </a>
+          <a href="https://web.whatsapp.com/send?phone=5519987793121">
+            <div className="box-socialMedia">
+              <img src={whatsapp} />
+              <span> Whatsapp </span>
+            </div>
+          </a>
         </div>
       </section>
       <section className="copy-right ">
-        <p> 2022 - Todos os direitos reservados </p>
+        <p> {year} - Todos os direitos reservados </p>
       </section>
     </>
   );
