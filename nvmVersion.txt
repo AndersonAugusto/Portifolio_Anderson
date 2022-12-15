@@ -1,0 +1,2 @@
+nvm ls : listar todas as versoes
+nvm use vXX.XX.XX : para mudar a versão do node

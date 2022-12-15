@@ -8,6 +8,28 @@ a {
     color: #fff;
     text-decoration: none;
 }
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.501);
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    span {
+        border: 10px solid #00fffd;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border-left-color: #008189;
+        animation:  rotationInfinity 1s linear infinite;
+    }
+    
+}
 .title {
     width: 90vw;
     margin: 0 auto 0 auto;
@@ -194,28 +216,40 @@ a {
         width: 100%;
         grid-auto-rows: max-content;
         .box-skill {
-            border: 1px solid;
+            border: 1px solid #6e6e6e;
             display: flex;
             padding: 10px 20px;
             background-color: #000000;
             height: max-content;
             animation: showSkill .5s alternate ease-in-out;
+            position: relative;
+            .seloSkill {
+                position: absolute;
+                right: 10px;
+                top: 15px;
+                img {
+                    width: 28px;
+                }
+            }
             img {
                 width: 50px;
             }
             p {
                 margin: 0 20px 0 20px;
                 white-space: nowrap;
+                font-weight: 700;
+                color: #b5b5b5;
             }
             .size-Progressbar {
-                width: 100%;
+                width: 70%;
             }
             .progressBar {
-                border: 1px solid #000;
+                border: 1px solid #4dff00;
                 font-weight: bolder;
                 padding: 2px;
-                margin: 10px 10px 0 20px;
-                height: 10px;
+                margin: 18px 10px 0 20px;
+                height: 5px;
+                border-radius: 20px;
             }
         }
     }
@@ -278,11 +312,13 @@ a {
         }
     }
     .alienigena {
+        position: relative;
+        top: 20px;
+        right: 10px;
+        width: 34vw;
+        position: absolute;
         img {
             animation: naveEspacialAnima 30s linear infinite;
-            position: absolute;
-            top: 20px;
-            right: 10px;
             width: 50px;
         }
     }
@@ -412,13 +448,19 @@ a {
 
 
 
-
-@keyframes naveEspacialAnima {
-    0%{right: 10px;}
-    50%{right:  400px;}
-    100%{right:  10px;}
+@keyframes rotationInfinity {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-
+@keyframes naveEspacialAnima {
+    0%{margin-left: 10px;}
+    50%{margin-left:  27vw;}
+    100%{margin-left:  10px;}
+}
 @keyframes animaOpacity {
     0%{opacity: 1;}
     50%{opacity: 1;}
@@ -429,18 +471,15 @@ a {
     96%{ opacity: 0;}
     100%{ opacity: 0;}
 }
-
 @keyframes animaFoguete {
-    0%{transform: rotate(90deg) scale(0.4); right: 70vw; top: -200px;}
-    45%{transform: rotate(90deg) scale(0.4); right: -110vw; top: -200px;}
-    60%{transform: rotate(10deg) scale(1); top: -100vh;}
-    61%{transform: rotate(-10deg) scale(1); top: -100vh;}
-    62%{transform: rotate(10deg) scale(1);}
-    90%{transform: rotate(-10deg);}
-    92%{transform: rotate(5deg);}
-    95%{transform: rotate(-5deg);}
-    96%{transform: rotate(2deg);}
-    100%{transform: rotate(0deg); top: 0;}
+    0%{transform: rotate(90deg) scale(0.4); right: 70vw; top: -200px; }
+    35%{transform: rotate(90deg) scale(0.4); right: -110vw; top: -200px;}
+    50%{transform: rotate(10deg) scale(1); top: -100vh; margin-left: 150vw;}
+    61%{transform: rotate(10deg) scale(1); top: -100vh; margin-left: 50vw;;}
+    62%{transform: rotate(35deg) scale(1);}
+    95%{transform: rotate(0deg);margin-left:0;}
+    96%{transform: rotate(0deg);}
+    100%{transform: rotate(0deg); top: 0; }
 }
 
 @keyframes animaOpacityText {
@@ -453,8 +492,6 @@ a {
     100%{right: 0;}
 }
 
-
-
 @keyframes showSkill {
     0% {
         opacity: 0;
@@ -465,8 +502,6 @@ a {
         transform: translate(0, 0);
     }
 }
-
-
 
 @media (max-width: 1242px) {
     .name-skills {
@@ -519,11 +554,6 @@ a {
             }
         }
     }
-    // .projects-box {
-    //     .project-box {
-    //         grid-template-columns: repeat(1, 1fr);
-    //     }
-    // }
 }
 @media (min-width: 1350px) {
     .container-top {

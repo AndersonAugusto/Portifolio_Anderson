@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./App.scss";
 
 //images
@@ -7,6 +8,7 @@ import fogo from "./assets/img/fogo.png";
 import astronauta from "./assets/img/astronauta.png";
 import MyPhoto from "./assets/img/ander.png";
 import alienigena from "./assets/img/alienigena.webp";
+import distintivo from "./assets/img/trofeu.png";
 
 import github from "./assets/img/github.png";
 import linkedin from "./assets/img/linkedin.png";
@@ -115,10 +117,6 @@ const Projects = [
     title: "Hash Game",
   },
   {
-    image: require("./assets/img/predio-comercial.png"),
-    title: "Building",
-  },
-  {
     image: require("./assets/img/logoMercadao.png"),
     title: "Marketplace",
   },
@@ -134,6 +132,8 @@ function App() {
   const [skills, setSkills] = useState(Skills);
   const [topPage, setTopPage] = useState(false);
   const [year, setYear] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const form = useRef();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -161,6 +161,12 @@ function App() {
   const RenderSkills = () => {
     return skills.map((skill, index) => (
       <div key={index} className="box-skill">
+        {skill.percent === 100 && (
+          <div className="seloSkill">
+            <img src={distintivo} />
+          </div>
+        )}
+
         <img src={skill.image} />
         <div className="size-Progressbar">
           <p>{skill.name}</p>
@@ -199,8 +205,37 @@ function App() {
     setActive(e.target.value);
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_ftqwwl7",
+        "template_mt2r5ca",
+        form.current,
+        "yrJ7LoiyBxJZSI8fH"
+      )
+      .then(
+        (result) => {
+          setLoading(false);
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <>
+      {loading && (
+        <>
+          <div className="loading">
+            <span></span>
+          </div>
+        </>
+      )}
       {topPage && (
         <a href="#goTop">
           <button className="topPage">^</button>
@@ -313,7 +348,6 @@ function App() {
             </p>
             <div className="alienigena">
               <img src={alienigena} />
-              <div className="feixe"></div>
             </div>
           </div>
         </div>
@@ -322,10 +356,19 @@ function App() {
         <h3 id="Contact">Contact me</h3>
       </div>
       <section className="container box-contact-me">
-        <form>
-          <input placeholder="Name" />
-          <input placeholder="Email" className="amongInput" />
-          <textarea placeholder="Type your message..." />
+        <form ref={form} onSubmit={sendEmail}>
+          <input placeholder="Name" name="Nome" />
+          <input
+            placeholder="Titulo"
+            name="Título"
+            id="title"
+            className="amongInput"
+          />
+          <textarea
+            placeholder="Type your message..."
+            name="Deixe uma mensagem"
+            id="message"
+          />
           <div>
             <button>SEND</button>
           </div>
