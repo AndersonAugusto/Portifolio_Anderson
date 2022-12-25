@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 import "./App.scss";
 
 //images
@@ -111,18 +112,22 @@ const Projects = [
   {
     image: require("./assets/img/forca.png"),
     title: "Hangman Game",
+    link: "/hangmanGame",
   },
   {
     image: require("./assets/img/jogo-da-velha.png"),
     title: "Hash Game",
+    link: "/hashGame",
   },
   {
     image: require("./assets/img/logoMercadao.png"),
     title: "Marketplace",
+    link: "/marketplace",
   },
   {
     image: require("./assets/img/buttonsImage.png"),
     title: "Buttons",
+    link: "/buttons",
   },
 ];
 
@@ -154,7 +159,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFinishedTimeout(false);
-    }, 10000);
+    }, 8000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -185,10 +190,12 @@ function App() {
 
   const RenderProjects = () => {
     return Projects.map((project, index) => (
-      <div key={index} className="box-project">
-        <img src={project.image} />
-        <p>{project.title}</p>
-      </div>
+      <Link to={project.link} className="box-project">
+        <div key={index} className="box-elements-projects">
+          <img src={project.image} />
+          <p>{project.title}</p>
+        </div>
+      </Link>
     ));
   };
 
@@ -227,8 +234,14 @@ function App() {
       );
   };
 
+  // const Me = () => {
+  //   return (
+
+  //   );
+  // };
+
   return (
-    <>
+    <main>
       {loading && (
         <>
           <div className="loading">
@@ -326,26 +339,79 @@ function App() {
           <RenderProjects />
         </div>
       </section>
-      <div className="title">
+      {/* <div className="title">
         <h3 id="AboutMe">About Me</h3>
-      </div>
-      <section className="container box-aboutMe ">
+      </div> */}
+      <section id="AboutMe" className="container box-aboutMe ">
         <div className="aboutMe-box">
-          <div className="aboutMe-photo">
-            <img src={MyPhoto} />
+          <div className="jsonMe">
+            <div>&#123;</div>
+            <p className="ml-1">
+              " firstName " :<span className="value"> " Anderson " </span>
+            </p>
+            <p className="ml-1">
+              " lastName " :<span className="value"> " Ferrari " </span>
+            </p>
+            <p className="ml-1">
+              " age " : <span className="number">26</span>
+            </p>
+            <p className="ml-1">
+              " state " :<span className="value"> " São Paulo " </span>
+            </p>
+            <p className="ml-1">
+              " currentCity " : <span className="value"> " Campinas " </span>
+            </p>
+
+            <p className="ml-1">
+              " info " :
+              <span className="value">
+                " I'm Anderson, a Fullstack Developer. "
+              </span>
+            </p>
+            <div className="ml-2">contact : &#123; </div>
+            <p className="ml-4">
+              " email " :
+              <span className="value">
+                " andersonaugustoferrari@hotmail.com "
+              </span>
+            </p>
+            <p className="ml-4">
+              " phone " : <span className="value"> " 19987793121 " </span>
+            </p>
+
+            <div className="ml-2">&#125;</div>
+            <div className="ml-2">createdAt : &#123; </div>
+            <p className="ml-4">
+              " month " :<span className="value">" December "</span>
+            </p>
+            <p className="ml-4">
+              " Day " : <span className="value"> " 17 " </span>
+            </p>
+            <p className="ml-4">
+              " Year " : <span className="value"> " 2022 " </span>
+            </p>
+
+            <div className="ml-2">&#125;</div>
+            <div>&#125;</div>
           </div>
           <div className="description">
-            <h3>Anderson Augusto Ferrari</h3>
-            <p>
-              Sou desenvolverdor Full stack Jr. Possuo sólidos conhecimentos Sou
-              desenvolvedor Full Stack, possuo sólidos conhecimentos sobre
-              Node.js (Express) com arquitetura MVC. Tenho grande experiência
-              com Front-end, sendo: HTML, CSS , Javascript , bootstrap e jquery.
-              Também tenho conhecimento em desenvolvimento de SPA com os
-              Frameworks: Angular e React.js. Obtive experiência com plataformas
-              de gerenciamento de projetos e sistema de versionamento, sendo:
-              Github, Trello e Asana.
-            </p>
+            <div className="aboutMe-photo">
+              <h3>About me</h3>
+              <p>
+                I'm Anderson, a Fulstack Developer with 2 years of solid
+                experiences. Expert in Javascript.
+              </p>
+              <p>
+                I have developed many types of front-ends like, Ecommerce,
+                landing-pages and more...My main focus these days is building
+                accessible, inclusive products and digital experiences at
+                Upstatement for a variety of clients.
+              </p>
+              <p>
+                When I am not coding, I am playing games , watching series or
+                learning more about technology.
+              </p>
+            </div>
             <div className="alienigena">
               <img src={alienigena} />
             </div>
@@ -400,7 +466,7 @@ function App() {
       <section className="copy-right ">
         <p> {year} - Todos os direitos reservados </p>
       </section>
-    </>
+    </main>
   );
 }
 

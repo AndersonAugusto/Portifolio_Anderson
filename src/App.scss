@@ -4,9 +4,20 @@
     margin: 0 auto 50px auto;
     background-color: #2e2e2e;
 }
+
+.ml-1 {margin-left: 10px;}
+.ml-2 {margin-left: 20px;}
+.ml-3 {margin-left: 30px;}
+.ml-4 {margin-left: 40px;}
+.ml-5 {margin-left: 50px;}
+
 a {
     color: #fff;
     text-decoration: none;
+}
+main {
+  background-color: #31186a;
+
 }
 .loading {
     position: fixed;
@@ -35,7 +46,7 @@ a {
     margin: 0 auto 0 auto;
     border: none;
     padding: 1px;
-    margin-top: 50px;
+    margin-top: 100px;
     color: #fff;
     position: relative;
 
@@ -45,13 +56,13 @@ a {
         width: max-content;
         margin-bottom: -1px;
         border-radius: 1px;
-        background-color: #2e2e2e;
+        background-color: #00000050;
         letter-spacing: 2px;
     }
 }
 
 .container-top {
-    background-image: url('./assets/img/modelo-1.jpg');
+    background-image: url('./assets/img/modelo-5.jpg');
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -77,7 +88,7 @@ a {
             color: #00e7ff;
             border: 1px solid #2e8a8833;
             padding: 10px 20px;
-            background-color: #2e8a8833;
+            background-color: #00000047;
             border-radius: 2px;
             transition: all .2s;
             &:hover,
@@ -85,7 +96,7 @@ a {
                 cursor: pointer;
                 box-shadow: 0px 2px 4px -5px #ffffff;
                 transform: translateY(-2px);
-                background-color: #338f8d;
+                background-color: #000;
             }
         }
     }
@@ -128,7 +139,7 @@ a {
     .caixa-foguete {
         position: absolute;
         left: 50%;
-        top: 500px;
+        top: 690px;
         transform: translate(-50%, -50%);
         .foguete {
             width: 100px;
@@ -136,7 +147,7 @@ a {
             position: relative;
             border: 1px solid rgba(255, 0, 0, 0);
             z-index: 99;
-            animation: animaFoguete 10s alternate ease-in-out;
+            animation: animaFoguete 8s alternate ease-in-out;
             .carcaca {
                 width: 100%;
                 object-fit: cover;
@@ -150,7 +161,7 @@ a {
                 margin-bottom: 50px;
                 position: absolute;
                 bottom: -145px;
-                animation: animaOpacity 10s alternate ease-in-out;
+                animation: animaOpacity 8s alternate ease-in-out;
             }
         }
     }
@@ -160,9 +171,9 @@ a {
 .container {
     width: 90vw;
     margin: 0 auto;
-    background-color: #2e2e2e;
+    background-color: #00000050;
     color: #fff;
-    box-shadow: 0px 3px 3px 0px #242424;
+    box-shadow: 0px 5px 2px 0px #0b0b0b8c;
 }
 .name-skills {
     display: flex;
@@ -180,13 +191,17 @@ a {
             height: 25%;
             width: 100%;
             color: #fff;
+            border: 1px solid #56565600;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #2e2e2e;
+            background-color: #00000000;
             transition: all .2s;
             cursor: pointer;
+            &:hover {
+                transition: all .2s;
+            }
         }
         .buttonInative {
             text-align:center;
@@ -197,11 +212,11 @@ a {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border: 1px solid #3f3f3f45;
             align-items: center;
-            background-color: #00000091;
+            background-color: #00000050;
             transition: all .2s;
             &:hover {
-                background-color: #2c35a1;
                 cursor: pointer;
                 transition: all .2s;
             }
@@ -216,7 +231,7 @@ a {
         width: 100%;
         grid-auto-rows: max-content;
         .box-skill {
-            border: 1px solid #6e6e6e;
+            border: 1px solid #484848;
             display: flex;
             padding: 10px 20px;
             background-color: #000000;
@@ -257,14 +272,15 @@ a {
 
 .projects-box {
     .project-box {
-        padding: 20px;
+        padding: 30px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        gap: 30px;
         .box-project {
             border: 1px solid #000;
+            border-radius: 8px;
             padding: 20px;
-            background-color: #343434;
+            background-color: #00000050;
             transition: all .2s;
             display: flex;
             flex-direction: column;
@@ -276,12 +292,19 @@ a {
                 transition: all .2s;
             }
             img {
-                width: 100%;
+                width: 40%;
             }
             p {
                 color: #fff;
                 text-align: center;
                 font-weight: 600;
+            }
+            .box-elements-projects {
+                padding: 10px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
             }
         }
     }
@@ -290,24 +313,58 @@ a {
 
 .box-aboutMe {
     position: relative;
+    background-color: #31186a;
+    box-shadow: none;
+    border: 1px;
+    margin-top: 150px;
+    box-shadow: 0px 5px 2px 0px #0b0b0b8c;
     .aboutMe-box {
         display: flex;
         .aboutMe-photo {
             padding: 20px;
-            width: 25vw;
             img {
                 width: 100%;
                 animation:  delayImagePerfil 3s alternate ease-in-out;
             }
         }
         .description {
+            padding: 20px;
             width: 75vw;
             font-size: 18px;
             line-height: 29px;
             color: #afafaf;
             font-weight: 600;
+            background-color: #00000050;
             h3 {
                 margin-bottom: 30px;
+            }
+        }
+        .jsonMe {
+            background-color: #00000087;
+            color: #14d114;
+            width: max-content;
+            max-width: 25vw;
+            height: 95%;
+            padding: 20px;
+            font-size: 15px;
+            font-weight: bolder;
+            line-height: 1.5;
+            /* border: 1px solid #09140a; */
+            border-radius: 5px;
+            box-shadow: -5px 0px 0px 0px #2abf36;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .number {
+                color: #a900ff;
+            }
+            .value {
+                color: #cdcd16;
             }
         }
     }
@@ -436,7 +493,7 @@ a {
     width: 100%;
     text-align: center;
     margin-top: 100px;
-    background-color: #2e2e2e;
+    background-color: #00000050;
     box-shadow: 0px 0px 6px 0px #080808;
     color: #fff;
     padding: 15px 0;
@@ -473,12 +530,12 @@ a {
 }
 @keyframes animaFoguete {
     0%{transform: rotate(90deg) scale(0.4); right: 70vw; top: -200px; }
-    35%{transform: rotate(90deg) scale(0.4); right: -110vw; top: -200px;}
-    50%{transform: rotate(10deg) scale(1); top: -100vh; margin-left: 150vw;}
-    61%{transform: rotate(10deg) scale(1); top: -100vh; margin-left: 50vw;;}
-    62%{transform: rotate(35deg) scale(1);}
+    45%{transform: rotate(90deg) scale(0.4); right: -110vw; top: -200px;}
+    60%{transform: rotate(10deg) scale(1); top: -100vh; margin-left: 150vw;}
+    71%{transform: rotate(10deg) scale(1); top: -100vh; margin-left: 50vw;;}
+    82%{transform: rotate(35deg) scale(1);}
+    94%{transform: rotate(0deg);margin-left:0;}
     95%{transform: rotate(0deg);margin-left:0;}
-    96%{transform: rotate(0deg);}
     100%{transform: rotate(0deg); top: 0; }
 }
 
@@ -556,11 +613,6 @@ a {
     }
 }
 @media (min-width: 1350px) {
-    .container-top {
-        .caixa-foguete {
-            top: 450px;
-        }
-    }
     .projects-box {
         .project-box {
             grid-template-columns: repeat(5, 1fr);
@@ -568,11 +620,7 @@ a {
     }
 }
 @media (min-width: 1650px) {
-    .container-top {
-        .caixa-foguete {
-            top: 400px;
-        }
-    }
+   
     .projects-box {
         .project-box {
             grid-template-columns: repeat(6, 1fr);

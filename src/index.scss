@@ -9,8 +9,17 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #31186a;
   overflow-x: hidden;
+  cursor: url('./assets/img/cursor.cur'), pointer;
+}
+
+img,
+link,
+a,
+input,
+button,
+textarea {
+  cursor: url('./assets/img/mao.cur'), pointer;
 }
 
 ::-webkit-scrollbar {
