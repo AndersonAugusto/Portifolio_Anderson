@@ -1,2 +1,4 @@
 nvm ls : listar todas as versoes
 nvm use vXX.XX.XX : para mudar a versão do node
+
+This project use node version v16.18.0

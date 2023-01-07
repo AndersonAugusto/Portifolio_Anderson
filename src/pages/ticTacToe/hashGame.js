@@ -66,17 +66,21 @@ const TicTacToe = () => {
 
   const renderStatus = () => {
     if (winner) {
-      return `Winner: ${winner}`;
+      renderResetButton();
+      return `Vencedor: ${winner}`;
     } else if (!winner && !board.includes("")) {
-      return "Draw";
+      renderResetButton();
+      return "Empate";
     } else {
-      return `Next player: ${isXNext ? "X" : "O"}`;
+      return `Próximo jogador: ${isXNext ? "X" : "O"}`;
     }
   };
 
   return (
     <div className="tic-tac-toe">
+      <h1> Tic Tac Toe</h1>
       <div className="status">{renderStatus()}</div>
+      {renderResetButton()}
       <div className="board">
         {renderSquare(0)}
         {renderSquare(1)}
@@ -88,7 +92,6 @@ const TicTacToe = () => {
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
-      {renderResetButton()}
     </div>
   );
 };

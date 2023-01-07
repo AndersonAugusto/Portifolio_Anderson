@@ -7,7 +7,6 @@ import "./App.scss";
 import foguete from "./assets/img/foguete.png";
 import fogo from "./assets/img/fogo.png";
 import astronauta from "./assets/img/astronauta.png";
-import MyPhoto from "./assets/img/ander.png";
 import alienigena from "./assets/img/alienigena.webp";
 import distintivo from "./assets/img/trofeu.png";
 
@@ -234,12 +233,6 @@ function App() {
       );
   };
 
-  // const Me = () => {
-  //   return (
-
-  //   );
-  // };
-
   return (
     <main>
       {loading && (
@@ -339,9 +332,7 @@ function App() {
           <RenderProjects />
         </div>
       </section>
-      {/* <div className="title">
-        <h3 id="AboutMe">About Me</h3>
-      </div> */}
+
       <section id="AboutMe" className="container box-aboutMe ">
         <div className="aboutMe-box">
           <div className="jsonMe">

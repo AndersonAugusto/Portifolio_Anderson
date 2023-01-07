@@ -1,0 +1,11 @@
+.box-hangmen {
+    width: 70vw;
+    margin: 0 auto;
+    .box-keyboard {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        button {
+            padding: 10px;
+        }
+    }
+}
