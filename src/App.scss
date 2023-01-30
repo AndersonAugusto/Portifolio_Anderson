@@ -316,12 +316,12 @@ main {
     background-color: #31186a;
     box-shadow: none;
     border: 1px;
+
     margin-top: 150px;
     box-shadow: 0px 5px 2px 0px #0b0b0b8c;
     .aboutMe-box {
         display: flex;
         .aboutMe-photo {
-            padding: 20px;
             img {
                 width: 100%;
                 animation:  delayImagePerfil 3s alternate ease-in-out;
@@ -343,9 +343,9 @@ main {
             background-color: #00000087;
             color: #14d114;
             width: max-content;
-            max-width: 25vw;
-            height: 95%;
-            padding: 20px;
+            // max-width: 25vw;
+            // height: 95%;
+            padding: 28px;
             font-size: 15px;
             font-weight: bolder;
             line-height: 1.5;
@@ -394,25 +394,28 @@ main {
     display: flex;
     height: 300px;
     .socialMedia {
-        padding: 20px;
+        padding: 15px;
         width: 40vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
       
         .box-socialMedia {
+            filter: opacity(0.5);
+            max-width: 200px;
             display: flex;
             margin: 15px auto 10px auto;
-            width: 212px;
+            // width: 212px;
             padding: 9px 20px;
             align-items: center;
-            background-color:  #343434;
-            box-shadow: 0px 0px 5px 1px black;
+            background-color: #00000082;
+            box-shadow: 0px 0px 3px 1px #000000;
             transition: all .2s;
             &:hover {
                 transition: all .2s;
-                background-color: #2a8086;
+                // background-color: #2a8086;
                 cursor: pointer;
+                filter: opacity(1);
             }
         }
         span {
@@ -423,6 +426,7 @@ main {
             width: 50px;
             height: 50px;
             margin-right: 20px;
+
         }
     }
 
@@ -430,8 +434,7 @@ main {
         width: 40vw;
         display: flex;
         flex-direction: column;
-        padding: 20px;
-
+        padding: 15px;
         button {
             width: 150px;
             padding: 10px;
@@ -453,13 +456,15 @@ main {
          padding-left: 10px;
          height: 100px;
          resize: none;
-         background-color: #4e4e4e;
+         background-color: #0000004a;
+         border: 1px solid #060606;
          color: #fff;
         }
         input {
          height: 40px;
          padding-left: 10px;
-         background-color: #4e4e4e;
+         background-color: #0000004a;
+         border: 1px solid #060606;
          color: #fff;
          &:nth-child(n - 2){
             margin-bottom: 10px;
@@ -600,6 +605,41 @@ main {
     }
 }
 @media (max-width: 600px) {
+
+    
+.box-aboutMe {
+  
+    .aboutMe-box {
+        display: flex;
+        .aboutMe-photo {
+            padding: 20px;
+            img {
+                width: 100%;
+                animation:  delayImagePerfil 3s alternate ease-in-out;
+            }
+        }
+        .description {
+            padding: 20px;
+            width: 75vw;
+            font-size: 18px;
+            line-height: 29px;
+            color: #afafaf;
+            font-weight: 600;
+            background-color: #00000050;
+            h3 {
+                margin-bottom: 30px;
+            }
+        }
+        .jsonMe {
+         
+            width: max-content;
+            max-width: 80vw;
+            text-align: left;
+
+        }
+    }
+}
+
     .container-top {
         .navbar{
             ul{
@@ -611,6 +651,34 @@ main {
             }
         }
     }
+    .box-contact-me {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        .socialMedia {
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          
+            .box-socialMedia {
+                filter: opacity(0.5);
+                max-width: 200px;
+    
+            }
+        }
+    
+        form {
+            width: 92%;
+            flex-direction: column;
+            button {
+                width: 150px;
+                padding: 10px;
+            }
+        }
+    }
+    
 }
 @media (min-width: 1350px) {
     .projects-box {

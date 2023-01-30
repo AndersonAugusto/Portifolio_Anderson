@@ -363,11 +363,11 @@ function App() {
             <p className="ml-4">
               " email " :
               <span className="value">
-                " andersonaugustoferrari@hotmail.com "
+                " anderson.augusto2023@hotmail.com "
               </span>
             </p>
             <p className="ml-4">
-              " phone " : <span className="value"> " 19987793121 " </span>
+              " phone " : <span className="value"> " 19991980059 " </span>
             </p>
 
             <div className="ml-2">&#125;</div>
@@ -446,7 +446,7 @@ function App() {
               <span> Github </span>
             </div>
           </a>
-          <a href="https://web.whatsapp.com/send?phone=5519987793121">
+          <a href="https://web.whatsapp.com/send?phone=5519991980059">
             <div className="box-socialMedia">
               <img src={whatsapp} />
               <span> Whatsapp </span>
